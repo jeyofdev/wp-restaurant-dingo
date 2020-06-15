@@ -68,5 +68,10 @@
     "test": [
       "phpcs"
     ]
+  },
+  "autoload": {
+    "psr-4": {
+        "jeyofdev\\wp\\dingo\\restaurant\\": "web/app/themes/wpdingorestaurant/class/"
+    }
   }
 }
