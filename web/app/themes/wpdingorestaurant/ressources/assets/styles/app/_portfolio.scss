@@ -1,0 +1,106 @@
+/**************** learn_about css start ****************/
+.portfolio_part {
+    margin-bottom: -20px;
+
+    .card-columns {
+        column-count: 2;
+        column-gap: 1.25rem;
+        orphans: 1;
+        widows: 1;
+
+        @media #{$small_mobile} {
+            column-count: 1;
+        }
+
+        @media #{$large_mobile} {
+            column-count: 1;
+        }
+
+        .blockquote {
+            padding: 0 10px 21px 0;
+
+            @media #{$small_mobile} {
+                padding: 0 10px 10px 0;
+            }
+
+            @media #{$large_mobile} {
+                padding: 0 10px 10px 0;
+            }
+
+            @media #{$tab_device} {
+                padding: 0 10px 10px 0;
+            }
+
+            @media #{$medium_device} {
+                padding: 0 10px 0 0;
+            }
+
+            h2 {
+                font-size: 45px;
+                margin-bottom: 13px;
+
+                @media #{$small_mobile} {
+                    font-size: 30px;
+                    line-height: 1.2;
+                }
+
+                @media #{$large_mobile} {
+                    font-size: 30px;
+                    line-height: 1.2;
+                }
+
+                @media #{$tab_device} {
+                    font-size: 30px;
+                    line-height: 1.2;
+                }
+
+                @media #{$medium_device} {
+                    font-size: 36px;
+                    line-height: 1.2;
+                }
+            }
+
+            p {
+                margin-bottom: 8px;
+            }
+        }
+
+        .card {
+            border: 0 solid transparent;
+            position: relative;
+            margin-bottom: 20px;
+
+            .card-body {
+                display: inline-block;
+                background-color: rgba(255, 255, 255, .7);
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                padding: 51px 30px;
+                opacity: 0;
+                visibility: hidden;
+
+                @include transform_time(.5s);
+
+                h5 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 4px;
+                }
+            }
+
+            .card-img-top {
+                border-top-left-radius: calc(0);
+                border-top-right-radius: calc(0);
+            }
+
+            &:hover {
+                .card-body {
+                    opacity: 1;
+                    visibility: visible;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
