@@ -1023,15 +1023,11 @@
                 padding: 7px;
                 font-size: 14px;
                 transition: all .2s linear;
-
-                &:hover {
-                    // color: $title-color;
-                }
             }
         }
     }
 
-    .quote-wrapper {
+    .wp-block-quote {
         background: rgba(130, 139, 178, .1);
         padding: 15px;
         line-height: 1.733;
@@ -1043,15 +1039,16 @@
         @media (min-width: 768px) {
             padding: 30px;
         }
-    }
 
-    .quotes {
-        background: $white_color;
-        padding: 15px 15px 15px 20px;
-        border-left: 2px solid;
+        > p {
+            background: $white_color;
+            padding: 15px 15px 15px 20px;
+            border-left: 2px solid;
+            margin-bottom: 0;
 
-        @media (min-width: 768px) {
-            padding: 25px 25px 25px 30px;
+            @media (min-width: 768px) {
+                padding: 25px 25px 25px 30px;
+            }
         }
     }
 
