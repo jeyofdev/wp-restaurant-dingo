@@ -5,7 +5,7 @@
  */
 
 use Timber\Timber;
-use jeyofdev\wp\dingo\restaurant\extension\Site;
+use jeyofdev\wp\dingo\restaurant\extending\Site;
 
 
 

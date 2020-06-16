@@ -1,0 +1,35 @@
+<!--::header part start::-->
+<div class="site-top">
+    {% set headerClass = add_class("main_menu home_menu", "main_menu") %}
+    <header class="{{ headerClass }}">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                {% for item in menu.items %}
+                                    <li class="nav-item{{ item.classes|join(' ') }}">
+                                        <a class="nav-link" href="{{ item.link }}">{{ item.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="menu_btn">
+                            {% set linkClass = add_class("btn_1 d-none d-sm-block", "single_page_btn d-none d-sm-block") %}
+                            <a href="#" class="{{ linkClass }}">{{ __("book a tabel", "dingo") }}</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+</div>
