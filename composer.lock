@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c540ff743f699d227a0c36394cb6f55e",
+    "content-hash": "083527a65c8bf0504ecde1b4a2a929b1",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -894,6 +894,24 @@
                 "environment"
             ],
             "time": "2020-04-12T15:20:09+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/duplicate-page",
+            "version": "4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-page/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-page.zip?timestamp=1585205975"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-page/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",

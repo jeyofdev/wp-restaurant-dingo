@@ -4,6 +4,7 @@ namespace jeyofdev\wp\dingo\restaurant\extending;
 
 use Timber\Site as TimberSite;
 use jeyofdev\wp\dingo\restaurant\inc\Assets;
+use jeyofdev\wp\dingo\restaurant\inc\Images;
 use jeyofdev\wp\dingo\restaurant\inc\Menus;
 use jeyofdev\wp\dingo\restaurant\inc\Supports;
 
@@ -21,5 +22,6 @@ class Site extends TimberSite
         Supports::add();
         Menus::register();
         Assets::load();
+        Images::load();
     }
 }
