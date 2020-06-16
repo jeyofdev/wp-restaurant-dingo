@@ -35,6 +35,7 @@ class Functions
         self::add_class();
         self::comments_number();
         self::category_by_post();
+        self::paginate_links();
     }
 
 
@@ -119,6 +120,49 @@ class Functions
     {
         self::$twig->addFunction(new TwigFunction("comments_number", function () {
             comments_number(sprintf(__("%d Comment", "dingo"), __("%d Comment", "dingo"), __("%d Comments", "dingo")));
+        }));
+    }
+
+
+
+    /**
+     * Retrieve paginated links for archive post pages.
+     *
+     * @return void
+     */
+    public static function paginate_links () : void
+    {
+        self::$twig->addFunction(new TwigFunction("paginate_links", function () {
+            $pages = paginate_links([
+                "type" => "array",
+                "prev_text" => '<i class="ti-angle-left"></i>',
+                "next_text" => '<i class="ti-angle-right"></i>'
+            ]);
+    
+            if ($pages === null) {
+                return;
+            }
+
+            $output = '<nav aria-label="pagination" class="blog-pagination justify-content-center d-flex">';
+            $output .= '<ul class="pagination">';
+
+            foreach ($pages as $page) {
+                $active = strpos($page, "current") !== false;
+                $class = "page-item";
+    
+                if ($active) {
+                    $class .= " active";
+                }
+
+                $output .= '<li class="' . $class . '">';
+
+                $output .= str_replace("page-numbers", "page-link", $page);
+                $output .= '</li>';
+            }
+
+            $output .= '</nav>';
+
+            return $output;
         }));
     }
 }
