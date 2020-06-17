@@ -35,8 +35,10 @@ class Functions
         self::add_class();
         self::comments_number();
         self::category_by_post();
-        self::paginate_links();
         self::get_avatar();
+        self::paginate_links();
+        self::prev_post_link();
+        self::next_post_link();
     }
 
 
@@ -127,6 +129,20 @@ class Functions
 
 
     /**
+     * Add the user avatar
+     *
+     * @return void
+     */
+    public static function get_avatar () : void
+    {
+        self::$twig->addFunction(new TwigFunction("get_avatar", function (?int $size = 90) {
+            return get_avatar(get_the_author_meta("ID"), $size);
+        }));
+    }
+
+
+
+    /**
      * Retrieve paginated links for archive post pages.
      *
      * @return void
@@ -170,14 +186,28 @@ class Functions
 
 
     /**
-     * Add the user avatar
+     * Displays the previous post link that is adjacent to the current post
      *
      * @return void
      */
-    public static function get_avatar () : void
+    public static function prev_post_link () : void
     {
-        self::$twig->addFunction(new TwigFunction("get_avatar", function (?int $size = 90) {
-            return get_avatar(get_the_author_meta("ID"), $size);
+        self::$twig->addFunction(new TwigFunction("prev_post_link", function () {
+            previous_post_link();
+        }));
+    }
+
+
+
+    /**
+     * Display the next post link that is adjacent to the current post
+     *
+     * @return void
+     */
+    public static function next_post_link () : void
+    {
+        self::$twig->addFunction(new TwigFunction("next_post_link", function () {
+            next_post_link();
         }));
     }
 }

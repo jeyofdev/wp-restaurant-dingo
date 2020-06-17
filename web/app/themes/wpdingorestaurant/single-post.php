@@ -4,8 +4,8 @@
  * The single post template file
  */
 
-use Timber\Post;
 use Timber\Timber;
+use jeyofdev\wp\dingo\restaurant\extending\Post;
 use jeyofdev\wp\dingo\restaurant\extending\Site;
 
 
