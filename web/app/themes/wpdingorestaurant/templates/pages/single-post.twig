@@ -21,6 +21,18 @@
                             {{ post.content | raw }}
                         </div>
                     </div>
+
+                    <div class="blog-author">
+                        <div class="media align-items-center">
+                            {{ get_avatar() | raw }}
+                            <div class="media-body">
+                                <a href="#">
+                                    <h4>{{ post.author.first_name ~ " " ~ post.author.last_name}}</h4>
+                                </a>
+                                <p>{{ post.author.description }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

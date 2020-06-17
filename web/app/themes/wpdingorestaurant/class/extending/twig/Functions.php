@@ -36,6 +36,7 @@ class Functions
         self::comments_number();
         self::category_by_post();
         self::paginate_links();
+        self::get_avatar();
     }
 
 
@@ -163,6 +164,20 @@ class Functions
             $output .= '</nav>';
 
             return $output;
+        }));
+    }
+
+
+
+    /**
+     * Add the user avatar
+     *
+     * @return void
+     */
+    public static function get_avatar () : void
+    {
+        self::$twig->addFunction(new TwigFunction("get_avatar", function (?int $size = 90) {
+            return get_avatar(get_the_author_meta("ID"), $size);
         }));
     }
 }
