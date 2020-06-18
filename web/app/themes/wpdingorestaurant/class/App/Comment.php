@@ -1,6 +1,6 @@
 <?php
 
-namespace jeyofdev\wp\dingo\restaurant\extending;
+namespace jeyofdev\wp\dingo\restaurant\App;
 
 use jeyofdev\wp\dingo\restaurant\inc\Comments;
 
