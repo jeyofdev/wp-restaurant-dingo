@@ -1,7 +1,21 @@
 (function ($) {
     "use strict";
 
+
+    // breadcrumb background
+    $('.breadcrumb_bg').each(function () {
+        var bg = $(this).data('setbg');
+        $(this).css({
+            'background-image': 'url(' + bg + ')',
+            'background-position': 'center',
+            'background-repeat': 'no-repeat',
+            'background-size': 'cover'
+        })
+    })
+
+
     $("#datepicker").datepicker();
+
 
     var review = $(".player_info_item");
     if (review.length) {
