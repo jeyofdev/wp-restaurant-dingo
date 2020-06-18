@@ -5,6 +5,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 posts-list">
+
+                    <!-- post content -->
                     <div class="single-post">
                         <div class="feature-img">
                             <img class="img-fluid" src="{{ post.thumbnail.src | resize("post_thumbnail") }}" alt="">
@@ -22,6 +24,8 @@
                         </div>
                     </div>
 
+
+                    <!-- pagination -->
                     <div class="navigation-top">
                         <div class="navigation-area">
                             <div class="row">
@@ -35,6 +39,8 @@
                         </div>
                     </div>
 
+
+                    <!-- author -->
                     <div class="blog-author">
                         <div class="media align-items-center">
                             {{ get_avatar() | raw }}
@@ -46,6 +52,17 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- comments -->
+                    <div class="comments-area">
+                        <h4>{{ comments_number() }}</h4>
+                        {% for comment in post.comments %}
+                            {% include "comment.twig" %}
+                        {% endfor %}
+                    </div>
+
+                    {{ function("comment_form") }}
                 </div>
             </div>
         </div>
