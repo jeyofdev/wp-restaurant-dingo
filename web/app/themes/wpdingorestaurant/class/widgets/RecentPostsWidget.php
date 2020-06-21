@@ -11,7 +11,6 @@ use jeyofdev\wp\dingo\restaurant\extending\Post;
 /**
  * Class which manages the recent posts widget
  */
-
 class RecentPostsWidget extends WP_Widget {
 
     /**
