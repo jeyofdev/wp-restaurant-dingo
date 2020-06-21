@@ -123,7 +123,7 @@ class TagCloudWidget extends WP_Widget {
             $this->get_field_id("count"),
             $this->get_field_name("count"),
             checked($count, true, false),
-            __("Show tag counts", "dingo")
+            $this->fields["count"]
         );
 
         if (array_key_exists("link_category", $taxonomies)) {

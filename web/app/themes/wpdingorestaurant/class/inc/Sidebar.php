@@ -2,8 +2,11 @@
 
 namespace jeyofdev\wp\dingo\restaurant\inc;
 
+use jeyofdev\wp\dingo\restaurant\widgets\PostCategoryWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\RecentPostsWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\TagCloudWidget;
+
+
 
 /**
  * Class which manages the sidebars
@@ -36,6 +39,7 @@ class Sidebar
     {
         register_widget(RecentPostsWidget::class);
         register_widget(TagCloudWidget::class);
+        register_widget(PostCategoryWidget::class);
     }
 
 
@@ -49,6 +53,7 @@ class Sidebar
     {
         unregister_widget("WP_Widget_Recent_Posts");
         unregister_widget("WP_Widget_Tag_Cloud");
+        unregister_widget("WP_Widget_Categories");
     }
 
 
