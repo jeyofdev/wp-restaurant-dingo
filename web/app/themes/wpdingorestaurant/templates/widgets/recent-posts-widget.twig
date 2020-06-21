@@ -1,0 +1,21 @@
+{{ args.before_widget|raw }}
+
+    {{ args.before_title|raw }}
+        {{ instance.title }}
+    {{ args.after_title|raw }}
+
+    {% for post in posts %}
+        <div class="media post_item">
+            <img src="{{ post.thumbnail.src("post_thumbnail_widget") }}" alt="post">
+            <div class="media-body">
+                <a href="{{ post.link }}">
+                    <h3>{{ post.title|chars(22) }}</h3>
+                </a>
+                {% if instance.show_date %}
+                    <p>{{ post.date_format }}</p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+
+{{ args.after_widget|raw }}

@@ -18,4 +18,4 @@ Timber::$dirname = "templates";
 new Twig();
 new Site();
 new Customizer();
-Context::add_menu();
+Context::add();

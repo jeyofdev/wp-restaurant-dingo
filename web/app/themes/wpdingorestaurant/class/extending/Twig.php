@@ -3,6 +3,7 @@
 namespace jeyofdev\wp\dingo\restaurant\extending;
 
 use Twig\Environment;
+use jeyofdev\wp\dingo\restaurant\extending\twig\Filters;
 use jeyofdev\wp\dingo\restaurant\extending\twig\Functions;
 
 
@@ -16,6 +17,7 @@ class Twig
     {
         add_filter("timber/twig", function (Environment $twig) {
             $this->add_function($twig);
+            $this->add_filter($twig);
 
             return $twig;
         } );
@@ -31,5 +33,17 @@ class Twig
     private function add_function (Environment $twig) : void
     {
         Functions::add($twig);
+    }
+
+
+
+    /**
+     * Add all new filters to Twig
+     *
+     * @return void
+     */
+    private function add_filter (Environment $twig) : void
+    {
+        Filters::add($twig);
     }
 }
