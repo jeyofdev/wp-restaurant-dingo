@@ -10,7 +10,7 @@ namespace jeyofdev\wp\dingo\restaurant\inc;
 class Styles {
 
     /**
-     * Register all image sizes
+     * Load all styles
      *
      * @return void
      */

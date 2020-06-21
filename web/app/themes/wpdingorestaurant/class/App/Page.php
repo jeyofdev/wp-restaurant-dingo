@@ -49,6 +49,8 @@ class Page extends Core  implements CoreInterface {
             $this->title = __("Our Blog", "dingo");
         } else if (is_category()) {
             $this->title = __(single_cat_title("Our Blog : ", false), "dingo");
+        } else if (is_search()) {
+            $this->title = __("Search results", "dingo");
         }
 
         return $this->title;

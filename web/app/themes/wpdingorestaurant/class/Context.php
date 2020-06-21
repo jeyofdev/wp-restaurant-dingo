@@ -13,7 +13,7 @@ use Timber\Timber;
 class Context {
 
     /**
-     * add information to context
+     * Add information to context
      *
      * @return void
      */
@@ -22,7 +22,7 @@ class Context {
         add_filter("timber/context", function (array $context) {
             $context["menu"] = new Menu("primary");
 
-            if (is_home() || is_single() || is_archive()) {
+            if (is_home() || is_single() || is_archive() || is_search()) {
                 $context["dynamic_sidebar"] = Timber::get_widgets("blog");
             }
 
