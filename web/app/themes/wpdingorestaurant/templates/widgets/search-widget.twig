@@ -1,0 +1,11 @@
+{{ args.before_widget|raw }}
+
+    {% if instance.title is not empty %}
+        {{ args.before_title|raw }}
+            {{ instance.title }}
+        {{ args.after_title|raw }}
+    {% endif %}
+
+    {{ search_form|raw }}
+
+{{ args.after_widget|raw }}

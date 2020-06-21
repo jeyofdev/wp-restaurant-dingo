@@ -4,6 +4,7 @@ namespace jeyofdev\wp\dingo\restaurant\inc;
 
 use jeyofdev\wp\dingo\restaurant\widgets\PostCategoryWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\RecentPostsWidget;
+use jeyofdev\wp\dingo\restaurant\widgets\SearchWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\TagCloudWidget;
 
 
@@ -40,6 +41,7 @@ class Sidebar
         register_widget(RecentPostsWidget::class);
         register_widget(TagCloudWidget::class);
         register_widget(PostCategoryWidget::class);
+        register_widget(SearchWidget::class);
     }
 
 
@@ -54,6 +56,7 @@ class Sidebar
         unregister_widget("WP_Widget_Recent_Posts");
         unregister_widget("WP_Widget_Tag_Cloud");
         unregister_widget("WP_Widget_Categories");
+        unregister_widget("WP_Widget_Search");
     }
 
 
