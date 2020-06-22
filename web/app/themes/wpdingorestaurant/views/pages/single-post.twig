@@ -1,0 +1,80 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/breadcrumb.twig" with { "title": __("Our Blog", "dingo") } %}
+
+    <section class="blog_area single-post-area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 posts-list">
+
+                    <!-- post content -->
+                    <div class="single-post">
+                        <div class="feature-img">
+                            <img class="img-fluid" src="{{ post.thumbnail.src | resize("post_thumbnail") }}" alt="">
+                        </div>
+                        <div class="blog_details">
+                            <h2>{{ post.title }}</h2>
+                            <ul class="blog-info-link mt-3 mb-4">
+                                <li>
+                                    <i class="far fa-user"></i>
+                                    {{ category_by_post(post) | raw }}
+                                </li>
+                                <li><a href="#"><i class="far fa-comments"></i>{{ comments_number() }}</a></li>
+                            </ul>
+                            {{ post.content | raw }}
+                        </div>
+                    </div>
+
+
+                    <!-- pagination -->
+                    <div class="navigation-top">
+                        <div class="navigation-area">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                                    {{ prev_post_link() | raw }}
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                                    {{ next_post_link() | raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- author -->
+                    <div class="blog-author">
+                        <div class="media align-items-center">
+                            {{ get_avatar() | raw }}
+                            <div class="media-body">
+                                <a href="#">
+                                    <h4>{{ post.author.first_name ~ " " ~ post.author.last_name}}</h4>
+                                </a>
+                                <p>{{ post.author.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- comments -->
+                    <div class="comments-area">
+                        <h4>{{ comments_number() }}</h4>
+                        {% for comment in post.comments %}
+                            {% include "comment.twig" %}
+                        {% endfor %}
+                    </div>
+
+                    {{ function("comment_form") }}
+
+
+                    <!-- sidebar -->
+                    <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            {{ dynamic_sidebar|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

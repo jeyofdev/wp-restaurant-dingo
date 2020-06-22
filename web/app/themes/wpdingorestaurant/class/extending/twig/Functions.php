@@ -39,6 +39,7 @@ class Functions
         self::paginate_links();
         self::prev_post_link();
         self::next_post_link();
+        self::single_cat_title();
     }
 
 
@@ -208,6 +209,20 @@ class Functions
     {
         self::$twig->addFunction(new TwigFunction("next_post_link", function () {
             next_post_link();
+        }));
+    }
+
+
+
+    /**
+     * Display or retrieve page title for category archive
+     *
+     * @return void
+     */
+    public static function single_cat_title () : void
+    {
+        self::$twig->addFunction(new TwigFunction("single_cat_title", function (?string $prefix = '', ?bool $display = true) {
+            return single_cat_title($prefix, $display);
         }));
     }
 }

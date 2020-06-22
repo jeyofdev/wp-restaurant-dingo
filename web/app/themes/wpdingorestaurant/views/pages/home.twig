@@ -1,0 +1,6 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/breadcrumb.twig" with { "title": __("Our Blog", "dingo") } %}
+    {% include "parts/posts-list.twig" with {"no_posts": __("No posts for the moment", "dingo") } %}
+{% endblock body %}

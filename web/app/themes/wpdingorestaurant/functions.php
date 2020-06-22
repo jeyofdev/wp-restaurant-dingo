@@ -11,7 +11,7 @@ use jeyofdev\wp\dingo\restaurant\extending\Twig;
 // timber
 $timber = new Timber();
 Timber::$autoescape = true;
-Timber::$dirname = "templates";
+Timber::$dirname = "views";
 
 
 

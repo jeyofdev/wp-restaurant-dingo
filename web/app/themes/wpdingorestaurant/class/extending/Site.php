@@ -6,6 +6,7 @@ use Timber\Site as TimberSite;
 use jeyofdev\wp\dingo\restaurant\inc\Assets;
 use jeyofdev\wp\dingo\restaurant\inc\Images;
 use jeyofdev\wp\dingo\restaurant\inc\Menus;
+use jeyofdev\wp\dingo\restaurant\inc\PostTypes;
 use jeyofdev\wp\dingo\restaurant\inc\Queries;
 use jeyofdev\wp\dingo\restaurant\inc\Sidebar;
 use jeyofdev\wp\dingo\restaurant\inc\Styles;
@@ -29,5 +30,6 @@ class Site extends TimberSite
         Sidebar::init();
         Styles::load();
         Queries::load();
+        PostTypes::load();
     }
 }

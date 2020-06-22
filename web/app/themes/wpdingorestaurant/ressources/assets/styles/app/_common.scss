@@ -200,6 +200,7 @@ button:focus,
     h2 {
         font-size: 40px;
         color: $heading_color;
+        text-transform: capitalize;
         line-height: 1.25;
         font-weight: 700;
         position: relative;
@@ -249,6 +250,7 @@ button:focus,
         color: $p_color;
         font-size: 16px;
         margin-bottom: 7px;
+        text-transform: capitalize;
     }
 }
 

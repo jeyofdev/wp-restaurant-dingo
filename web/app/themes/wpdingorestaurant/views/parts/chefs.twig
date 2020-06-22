@@ -1,0 +1,38 @@
+{% for post in posts %}
+    <section class="chefs_part blog_item_section section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="section_tittle">
+                        <p>{{ post.chef_section_subtitle }}</p>
+                        <h2>{{ post.chef_section_title }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {% if chefs|length > 0 %}
+                    {% for chef in chefs %}
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="single_blog_item">
+                            <div class="single_blog_img">
+                                <img src="{{ chef.thumbnail.src|resize("chef_thumbnail") }}" alt="">
+                            </div>
+                            <div class="single_blog_text text-center">
+                                <h3>{{ chef.title }}</h3>
+                                <p>{{ chef.field_object("job").value }}</p>
+                                <div class="social_icon">
+                                    <a href="{{ "https://www.facebook.com/" ~ chef.social_media_facebook }}" target="_blank"> <i class="ti-facebook"></i> </a>
+                                    <a href="{{ "https://twitter.com/" ~ chef.social_media_twitter }}" target="_blank"> <i class="ti-twitter-alt"></i> </a>
+                                    <a href="{{ "https://www.instagram.com/" ~ chef.social_media_instagram }}" target="_blank"> <i class="ti-instagram"></i> </a>
+                                    <a href="{{ "mailto:" ~ chef.social_media_email }}" target="_blank"> <i class="ti-email"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endfor %}
