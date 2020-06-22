@@ -11,8 +11,10 @@
  */
 
 use WordPlate\Acf\Location;
+use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Group;
+use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Select;
 
 
@@ -83,3 +85,35 @@ register_extended_field_group([
     "instruction_placement" => "label",
     "active" => true,
 ]);
+
+
+
+/**
+ * Chefs video section
+ */
+register_extended_field_group([
+    "title" => __("Video section", "dingo"),
+    "fields" => [
+        Text::make(__("Title", "dingo"), "chef_video_section_title")
+            ->required()
+            ->defaultValue(__("Expect The Best", "dingo")),
+        Image::make(__("Background", "dingo"), "chef_video_background")
+            ->instructions("Add a background image")
+            ->required()
+            ->returnFormat("array")
+            ->previewSize("medium")
+            ->library("all"),
+        Url::make(__("Video", "dingo"), "video_url")
+            ->instructions("Add a youtubes presentation video")
+            ->required(),
+    ],
+    "location" => [
+        Location::if("page_template", "==", "template/template-chefs.php")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+

@@ -3,7 +3,7 @@
 
 
     // breadcrumb background
-    $('.breadcrumb_bg').each(function () {
+    $('.breadcrumb_bg, .intro_video_bg').each(function () {
         var bg = $(this).data('setbg');
         $(this).css({
             'background-image': 'url(' + bg + ')',

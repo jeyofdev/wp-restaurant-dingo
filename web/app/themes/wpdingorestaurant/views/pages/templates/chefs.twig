@@ -2,5 +2,9 @@
 
 {% block body %}
     {% include "parts/breadcrumb.twig" with { "title": "Experienced Chefs" } %}
-    {% include "parts/chefs.twig" %}
+
+    {% for post in posts %}
+        {% include "parts/chefs.twig" %}
+        {% include "parts/video.twig" %}
+    {% endfor %}
 {% endblock body %}
