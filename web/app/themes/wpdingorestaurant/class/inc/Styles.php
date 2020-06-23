@@ -17,6 +17,7 @@ class Styles {
     public static function load () : void
     {
         self::remove_style_attr_to_widget_tag_cloud();
+        self::remove_tag_p();
     }
 
 
@@ -33,5 +34,17 @@ class Styles {
             $args = str_replace('style="font-size: 8pt;" ', '', $args);
             return $args;
         });
+    }
+
+
+
+    /**
+     * Remove paragraphs add at the beginning and at the end of the content
+     *
+     * @return void
+     */
+    public static function remove_tag_p () : void
+    {
+        remove_filter("the_content", "wpautop");
     }
 }

@@ -36,13 +36,13 @@ register_extended_field_group([
         Select::make(__("Job", "dingo"), "job")
             ->required()
             ->choices([
-                "chef_master" => "Chef Master",
-                "chef" => "Chef",
+                "chef_master" => __("Chef Master", "dingo"),
+                "chef" => __("Chef", "dingo"),
             ])
             ->returnFormat("label"),
-        Group::make(__("Social media", "dingo"), "social_media")
+        Group::make(__("Social media", "dingo"), "social")
             ->required()
-            ->instructions("add the chef's nickname on social networks")
+            ->instructions(__("add the chef's nickname on social networks", "dingo"))
             ->layout("row")
             ->fields([
                 Text::make(__("Facebook", "dingo"), "facebook")->placeholder("john-doe")->prepend("https://www.facebook.com/"),
@@ -64,6 +64,53 @@ register_extended_field_group([
 
 
 /**
+ * Custom post type testimonial
+ */
+register_extended_field_group([
+    "title" => __("Testimonial information", "dingo"),
+    "fields" => [
+        Text::make(__("Author", "dingo"), "writer")->required(),
+        Text::make(__("Job", "dingo"), "job")->required()
+    ],
+    "location" => [
+        Location::if("post_type", "==", "testimonial")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * Testimonials section
+ */
+register_extended_field_group([
+    "title" => __("Testimonials section", "dingo"),
+    "fields" => [
+        Text::make(__("Title", "dingo"), "testimonial_section_title")
+            ->required()
+            ->defaultValue(__("Customers Feedback", "dingo")),
+        Text::make(__("Subtitle", "dingo"), "testimonial_section_subtitle")
+            ->required()
+            ->defaultValue(__("Testimonials", "dingo"))
+    ],
+    "location" => [
+        Location::if("page_template", "==", "template/template-about.php")
+    ],
+    "menu_order" => 1,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
  * Chefs section
  */
 register_extended_field_group([
@@ -74,7 +121,7 @@ register_extended_field_group([
             ->defaultValue(__("Our Experience Chefs", "dingo")),
         Text::make(__("Subtitle", "dingo"), "chef_section_subtitle")
             ->required()
-            ->defaultValue(__("Team Member", "dingo")),
+            ->defaultValue(__("Team Member", "dingo"))
     ],
     "location" => [
         Location::if("page_template", "==", "template/template-chefs.php")
@@ -94,18 +141,18 @@ register_extended_field_group([
 register_extended_field_group([
     "title" => __("Video section", "dingo"),
     "fields" => [
-        Text::make(__("Title", "dingo"), "chef_video_section_title")
+        Text::make(__("Title", "dingo"), "video_section_title")
             ->required()
             ->defaultValue(__("Expect The Best", "dingo")),
-        Image::make(__("Background", "dingo"), "chef_video_background")
-            ->instructions("Add a background image")
+        Image::make(__("Background", "dingo"), "video_background")
+            ->instructions(__("Add a background image", "dingo"))
             ->required()
             ->returnFormat("array")
             ->previewSize("medium")
             ->library("all"),
         Url::make(__("Video", "dingo"), "video_url")
-            ->instructions("Add a youtubes presentation video")
-            ->required(),
+            ->instructions(__("Add a youtubes presentation video", "dingo"))
+            ->required()
     ],
     "location" => [
         Location::if("page_template", "==", "template/template-chefs.php")

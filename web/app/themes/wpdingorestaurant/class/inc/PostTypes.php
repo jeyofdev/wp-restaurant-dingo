@@ -54,5 +54,30 @@ class PostTypes {
             "taxonomies" => [],
             "has_archive" => false
         ]);
+
+        register_post_type("testimonial", [
+            "label" => __("Testimonials", "dingo"),
+            "labels" => [
+                "name"                     => __("Testimonials", "dingo"),
+                "singular_name"            => __("Testimonial", "dingo"),
+                "edit_item"                => __("Edit testimonial", "dingo"),
+                "new_item"                 => __("New testimonial", "dingo"),
+                "view_item"                => __("View testimonial", "dingo"),
+                "view_items"               => __("View testimonials", "dingo"),
+                "search_items"             => __("Search testimonials", "dingo"),
+                "not_found"                => __("No testimonials found.", "dingo"),
+                "not_found_in_trash"       => __("No testimonials found in trash.", "dingo"),
+                "all_items"                => __("All testimonials", "dingo")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 40,
+            "menu_icon" => "dashicons-admin-users",
+            "supports" => ["title", "editor", "thumbnail"],
+            "show_in_rest" => true,
+            "taxonomies" => [],
+            "has_archive" => false
+        ]);
     }
 }

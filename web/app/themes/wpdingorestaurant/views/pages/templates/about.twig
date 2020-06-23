@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% include "parts/breadcrumb.twig" with { "title": __("About Us", "dingo") } %}
+
+    {% for post in posts %}
+        {% include "parts/testimonials.twig" %}
+        {% include "parts/chefs.twig" %}
+    {% endfor %}
+{% endblock body %}
