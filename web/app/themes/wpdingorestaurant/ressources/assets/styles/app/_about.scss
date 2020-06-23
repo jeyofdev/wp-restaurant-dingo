@@ -84,7 +84,9 @@
         content: "";
         bottom: 133px;
         z-index: -1;
-        background: url(../../images/about_overlay.png) bottom right no-repeat;
+        // background: url(../../images/about_overlay.png) bottom right no-repeat;
+        background-position: bottom right;
+        background-repeat: no-repeat;
         background-size: 15% 60%;
         right: 0;
 

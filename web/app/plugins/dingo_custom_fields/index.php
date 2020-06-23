@@ -16,6 +16,7 @@ use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Group;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Select;
+use WordPlate\Acf\Fields\Wysiwyg;
 
 
 
@@ -78,6 +79,51 @@ register_extended_field_group([
     "position" => "normal",
     "style" => "default",
     "label_placement" => "top",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * About section
+ */
+register_extended_field_group([
+    "title" => __("About section", "dingo"),
+    "fields" => [
+        Text::make(__("Title", "dingo"), "about_section_title")
+            ->required()
+            ->defaultValue(__("Where The Food’s As Good As The Root Beer.", "dingo")),
+        Text::make(__("Subtitle", "dingo"), "about_section_subtitle")
+            ->required()
+            ->defaultValue(__("Our History", "dingo")),
+        Text::make(__("Introduction", "dingo"), "about_section_intro")
+            ->required()
+            ->defaultValue(__("Satisfying people hunger for simple pleasures", "dingo")),
+        Wysiwyg::make(__("Content", "dingo"), "about_section_content")
+            ->mediaUpload(false)
+            ->tabs("visual")
+            ->toolbar("basic")
+            ->required(),
+        Image::make(__("Content picture", "dingo"), "about_section_image")
+            ->required()
+            ->returnFormat("array")
+            ->previewSize("medium")
+            ->library("all"),
+        Image::make(__("Background", "dingo"), "about_section_background")
+            ->instructions(__("Add a background image", "dingo"))
+            ->required()
+            ->returnFormat("array")
+            ->previewSize("medium")
+            ->library("all")
+    ],
+    "location" => [
+        Location::if("page_template", "==", "template/template-about.php")
+    ],
+    "menu_order" => 0,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
     "instruction_placement" => "label",
     "active" => true,
 ]);

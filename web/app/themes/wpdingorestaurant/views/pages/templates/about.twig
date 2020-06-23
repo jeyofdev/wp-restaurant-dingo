@@ -4,7 +4,8 @@
     {% include "parts/breadcrumb.twig" with { "title": __("About Us", "dingo") } %}
 
     {% for post in posts %}
+        {% include "parts/about.twig" %}
         {% include "parts/testimonials.twig" %}
-        {% include "parts/chefs.twig" %}
+        {% include "parts/chefs.twig" with { post: section_chefs } %}
     {% endfor %}
 {% endblock body %}
