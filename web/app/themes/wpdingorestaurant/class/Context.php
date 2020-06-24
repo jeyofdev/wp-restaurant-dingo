@@ -2,6 +2,7 @@
 
 namespace jeyofdev\wp\dingo\restaurant;
 
+use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
 use Timber\Menu;
 use Timber\Timber;
 
@@ -23,8 +24,15 @@ class Context {
             $context["menu"] = new Menu("primary");
 
             if (is_home() || is_single() || is_archive() || is_search()) {
-                $context["dynamic_sidebar"] = Timber::get_widgets("blog");
+                $context["dynamic_sidebar_blog"] = Timber::get_widgets("blog");
             }
+
+            $context["dynamic_sidebar_footer"] = Timber::get_widgets("footer");
+            $context["rs"] = [
+                "facebook" => get_option(RestaurantSettings::FACEBOOK),
+                "twitter" => get_option(RestaurantSettings::TWITTER),
+                "instagram" => get_option(RestaurantSettings::INSTAGRAM)
+            ];
 
             return $context;
         });

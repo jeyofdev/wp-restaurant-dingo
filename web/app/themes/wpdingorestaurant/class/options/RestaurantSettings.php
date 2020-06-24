@@ -92,7 +92,7 @@ class RestaurantSettings
         add_settings_field("restaurant_options_opening_hours", __("Opening hours", "dingo"), function () {
             ?>
                 <textarea name="<?= self::OPENING_HOURS; ?>" id="<?= self::OPENING_HOURS; ?>" class="regular-text ltr" rows="8"><?= esc_html(get_option(self::OPENING_HOURS)); ?></textarea>
-                <p class="description" id="opening_hours-description"><?= __("Opening hours (ex: Mon - Sat, 08 AM - 06 PM).", "dingo"); ?></p>
+                <p class="description" id="opening_hours-description"><?= __("Opening hours (ex: Monday : 8H - 19h" . "\n\r" . "Tuesday : 8H - 19h" . "\n\r" . "...).", "dingo"); ?></p>
             <?php
         }, self::GROUP, self::SECTION_SLUG);
     }

@@ -8,7 +8,7 @@
         padding: 70px 0 30px;
     }
 
-    .single-footer-widget {
+    .single_footer_widget {
         @media (max-width: 991px) {
             margin-bottom: 30px;
         }
@@ -23,6 +23,7 @@
             margin-bottom: 23px;
             font-weight: 700;
             font-size: 24px;
+            text-transform: capitalize;
 
             @media (max-width: 1024px) {
                 font-size: 18px;
@@ -110,7 +111,8 @@
         }
     }
 
-    .contact_info {
+    .contact_info,
+    .opening_hours {
         position: relative;
         margin-bottom: 20px;
 
@@ -124,6 +126,7 @@
             span {
                 color: #2c3033;
                 font-size: 16px;
+                font-weight: bold;
             }
         }
     }

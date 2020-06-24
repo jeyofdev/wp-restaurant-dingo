@@ -2,6 +2,8 @@
 
 namespace jeyofdev\wp\dingo\restaurant\inc;
 
+use jeyofdev\wp\dingo\restaurant\widgets\ContactWidget;
+use jeyofdev\wp\dingo\restaurant\widgets\OpeningHoursWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\PostCategoryWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\RecentPostsWidget;
 use jeyofdev\wp\dingo\restaurant\widgets\SearchWidget;
@@ -42,6 +44,8 @@ class Sidebar
         register_widget(TagCloudWidget::class);
         register_widget(PostCategoryWidget::class);
         register_widget(SearchWidget::class);
+        register_widget(ContactWidget::class);
+        register_widget(OpeningHoursWidget::class);
     }
 
 
@@ -73,6 +77,16 @@ class Sidebar
             "name" => __("Blog sidebar", "estateagency"),
             'before_widget' => '<aside id="%1$s" class="single_sidebar_widget %2$s">',
             'after_widget'  => "</aside>",
+            'before_title'  => '<h4 class="widget_title">',
+            'after_title'   => "</h4>",
+        ]);
+
+        register_sidebar([
+            "id" => "footer",
+            "name" => __("Footer sidebar", "dingo"),
+            'before_widget' => '<aside id="%1$s" class="single-footer-widget %2$s">',
+            'before_widget' => '<div class="col-xl-3 col-sm-6 col-md-4"><div id="%1$s" class="single_footer_widget %2$s">',
+            'after_widget'  => "</div></div>",
             'before_title'  => '<h4 class="widget_title">',
             'after_title'   => "</h4>",
         ]);
