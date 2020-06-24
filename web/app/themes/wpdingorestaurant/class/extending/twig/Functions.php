@@ -2,6 +2,7 @@
 
 namespace jeyofdev\wp\dingo\restaurant\extending\twig;
 
+use \DateTime;
 use Timber\Post;
 use Twig\Environment;
 use Twig\TwigFunction;
@@ -40,6 +41,7 @@ class Functions
         self::prev_post_link();
         self::next_post_link();
         self::single_cat_title();
+        self::get_day_link();
     }
 
 
@@ -223,6 +225,26 @@ class Functions
     {
         self::$twig->addFunction(new TwigFunction("single_cat_title", function (?string $prefix = '', ?bool $display = true) {
             return single_cat_title($prefix, $display);
+        }));
+    }
+
+
+
+    /**
+     * Retrieves the permalink for the day archives with year and month.
+     *
+     * @return void
+     */
+    public static function get_day_link () : void
+    {
+        self::$twig->addFunction(new TwigFunction("get_day_link", function ($post) {
+            $date = new DateTime($post->date);
+
+            $archive_year  = get_the_time($date->format("Y"), $post); 
+            $archive_month = get_the_time($date->format("m"), $post); 
+            $archive_day   = get_the_time($date->format("d"), $post); 
+            
+            return esc_url(get_day_link($archive_year, $archive_month, $archive_day));
         }));
     }
 }

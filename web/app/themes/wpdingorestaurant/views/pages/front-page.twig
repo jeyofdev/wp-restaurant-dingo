@@ -1,0 +1,7 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    {% for post in posts %}
+        {% include "parts/blog.twig" %}
+    {% endfor %}
+{% endblock body %}

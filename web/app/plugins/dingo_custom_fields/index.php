@@ -231,7 +231,7 @@ register_extended_field_group([
 
 
 /**
- * Chefs video section
+ * Video section
  */
 register_extended_field_group([
     "title" => __("Video section", "dingo"),
@@ -251,6 +251,31 @@ register_extended_field_group([
     ],
     "location" => [
         Location::if("page_template", "==", "template/template-chefs.php")
+    ],
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
+ * Blog section
+ */
+register_extended_field_group([
+    "title" => __("Blog section", "dingo"),
+    "fields" => [
+        Text::make(__("Title", "dingo"), "blog_section_title")
+            ->required()
+            ->defaultValue(__("Latest From Blog", "dingo")),
+        Text::make(__("Subtitle", "dingo"), "blog_section_subtitle")
+            ->required()
+            ->defaultValue(__("Recent News", "dingo"))
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
     ],
     "position" => "normal",
     "style" => "default",

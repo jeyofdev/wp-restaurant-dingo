@@ -30,6 +30,7 @@ class Filters
     {
         self::$twig = $twig;
         self::chars();
+        self::hashtag();
     }
 
 
@@ -48,6 +49,27 @@ class Filters
             }
 
             return $text;
+        }));
+    }
+
+
+
+    /**
+     * Format links to category archive pages by changing the class attribute and the label (adding a #)
+     *
+     * @return void
+     */
+    public static function hashtag () : void
+    {
+        self::$twig->addFilter(new TwigFilter("hashtag", function (string $text) {
+            $content = explode(", ", $text);
+            
+            $newContent = [];
+            foreach ($content as $string) {
+                $newContent[] = str_replace('">', '" class="date_item"><span>#</span>', $string);
+            }
+
+            return join(", ", $newContent);
         }));
     }
 }
