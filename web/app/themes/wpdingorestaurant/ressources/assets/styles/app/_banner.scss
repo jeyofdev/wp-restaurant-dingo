@@ -2,26 +2,25 @@
 .banner_part {
     height: 880px;
     position: relative;
-    background-image: url(../../images/banner_bg.png);
     background-repeat: no-repeat;
     background-size: 41%;
     background-position: top right;
 
     @media #{$small_mobile} {
         height: 650px;
-        background-image: none;
+        background-image: none !important;
         background-color: #f0eed4;
     }
 
     @media #{$large_mobile} {
         height: 650px;
-        background-image: none;
+        background-image: none !important;
         background-color: #f0eed4;
     }
 
     @media #{$tab_device} {
         height: 700px;
-        background-image: none;
+        background-image: none !important;
         background-color: #f0eed4;
     }
 
@@ -37,7 +36,8 @@
         content: "";
         bottom: -50px;
         z-index: -1;
-        background: url(../../images/banner_overlay.png) bottom right no-repeat;
+        background-repeat: no-repeat;
+        background-position: bottom right;
         right: 19%;
 
         @media #{$small_mobile} {
