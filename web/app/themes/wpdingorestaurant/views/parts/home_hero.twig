@@ -1,0 +1,22 @@
+<section class="banner_part banner_bg" data-setbg="{{ Image(post.meta("home_top_section_background")).src }}">
+    <div class="container">
+        <div class="row align-items-center overlay-bg" data-setbg="{{ Image(post.meta("home_top_section_background_overlay")).src }}">
+            <div class="col-lg-6">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h5>{{ post.home_top_section_subtitle }}</h5>
+                        <h1>{{ post.home_top_section_title }}</h1>
+                        <p>{{ post.content | raw }}</p>
+                        <div class="banner_btn">
+                            <div class="banner_btn_iner">
+                                <a href="#" class="btn_2">Reservation <img src="{{ theme.link ~ '/assets/images/icon/left_1.svg' }}" alt=""></a>
+                            </div>
+                            <a href="{{ video.video_url }}" class="popup-youtube video_popup">
+                                <span><img src="{{ theme.link ~ '/assets/images/icon/play.svg' }}" alt=""></span>{{ __("Watch our story", "dingo") }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

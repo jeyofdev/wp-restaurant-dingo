@@ -262,6 +262,43 @@ register_extended_field_group([
 
 
 /**
+ * Home hero section
+ */
+register_extended_field_group([
+    "title" => __("home top section", "dingo"),
+    "fields" => [
+        Text::make(__("Title", "dingo"), "home_top_section_title")
+            ->required()
+            ->defaultValue(__("Deliciousness jumping into the mouth", "dingo")),
+        Text::make(__("Subtitle", "dingo"), "home_top_section_subtitle")
+            ->required()
+            ->defaultValue(__("Expensive But The Best", "dingo")),
+        Image::make(__("Background", "dingo"), "home_top_section_background")
+            ->instructions(__("Add a background image", "dingo"))
+            ->required()
+            ->returnFormat("array")
+            ->previewSize("medium")
+            ->library("all"),
+        Image::make(__("Background overlay", "dingo"), "home_top_section_background_overlay")
+            ->required()
+            ->returnFormat("array")
+            ->previewSize("medium")
+            ->library("all"),
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 1,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
  * Featured food menus section
  */
 register_extended_field_group([
@@ -277,7 +314,7 @@ register_extended_field_group([
     "location" => [
         Location::if("page_type", "==", "front_page")
     ],
-    "menu_order" => 1,
+    "menu_order" => 2,
     "position" => "normal",
     "style" => "default",
     "label_placement" => "left",
@@ -303,7 +340,7 @@ register_extended_field_group([
     "location" => [
         Location::if("page_type", "==", "front_page")
     ],
-    "menu_order" => 2,
+    "menu_order" => 3,
     "position" => "normal",
     "style" => "default",
     "label_placement" => "left",
