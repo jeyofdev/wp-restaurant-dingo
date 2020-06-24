@@ -207,22 +207,27 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px 30px;
+    margin-bottom: 50px;
 
     @media #{$small_mobile} {
         grid-template-columns: 1fr;
         row-gap: 20px;
+        margin-bottom: 20px;
     }
 
     @media #{$large_mobile} {
         row-gap: 20px;
+        margin-bottom: 20px;
     }
 
     @media #{$tab_device} {
         row-gap: 20px;
+        margin-bottom: 20px;
     }
 
     @media #{$medium_device} {
         gap: 30px;
+        margin-bottom: 30px;
     }
 
     &.active {
