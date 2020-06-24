@@ -37,6 +37,7 @@
 
     .single_blog_img {
         img {
+            border-radius: 5% 5% 0 0;
             width: 100%;
         }
     }
@@ -93,7 +94,10 @@
             .date_item {
                 color: #2c3033;
                 font-size: 15px;
-                margin-right: 19px;
+
+                &:first-child {
+                    margin-right: 19px;
+                }
 
                 span {
                     color: $btn_bg;
