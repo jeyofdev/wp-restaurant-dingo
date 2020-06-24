@@ -15,6 +15,11 @@ $context["food_menus_page"] = Timber::get_post([
     "post_type" => "page",
     "name" => "menus"
 ]);
+$context["featured_food_menus"] = Timber::get_posts([
+    "post_type" => "food_menu",
+    "posts_per_page" => 3,
+    "order" => "DESC"
+]);
 $context["food_menus"] = Timber::get_posts([
     "post_type" => "food_menu",
     "posts_per_page" => -1,

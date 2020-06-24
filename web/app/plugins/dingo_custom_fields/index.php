@@ -262,6 +262,32 @@ register_extended_field_group([
 
 
 /**
+ * Featured food menus section
+ */
+register_extended_field_group([
+    "title" => __("Featured food menus section", "dingo"),
+    "fields" => [
+        Text::make(__("Title", "dingo"), "featured_food_menus_section_title")
+            ->required()
+            ->defaultValue(__("Our Exclusive Items", "dingo")),
+        Text::make(__("Subtitle", "dingo"), "featured_food_menus_section_subtitle")
+            ->required()
+            ->defaultValue(__("Popular Dishes", "dingo"))
+    ],
+    "location" => [
+        Location::if("page_type", "==", "front_page")
+    ],
+    "menu_order" => 1,
+    "position" => "normal",
+    "style" => "default",
+    "label_placement" => "left",
+    "instruction_placement" => "label",
+    "active" => true,
+]);
+
+
+
+/**
  * Blog section
  */
 register_extended_field_group([
@@ -277,6 +303,7 @@ register_extended_field_group([
     "location" => [
         Location::if("page_type", "==", "front_page")
     ],
+    "menu_order" => 2,
     "position" => "normal",
     "style" => "default",
     "label_placement" => "left",

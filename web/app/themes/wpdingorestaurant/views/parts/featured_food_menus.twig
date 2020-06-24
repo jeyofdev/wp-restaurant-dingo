@@ -1,0 +1,29 @@
+<section class="exclusive_item_part blog_item_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5">
+                <div class="section_tittle">
+                    <p>{{ post.featured_food_menus_section_subtitle }}</p>
+                    <h2>{{ post.featured_food_menus_section_title }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for item in featured_food_menus %}
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="{{ item.thumbnail.src | resize("home_thumbnail")}}" alt="">
+                        </div>
+                        <div class="single_blog_text">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.content | raw }}</p>
+                            <a href="#" class="btn_3">{{ __("Read More", "dingo") }} <img src="{{ theme.link ~ '/assets/images/icon/left_2.svg' }}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
