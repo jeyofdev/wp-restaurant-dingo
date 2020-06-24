@@ -11,6 +11,7 @@ use jeyofdev\wp\dingo\restaurant\inc\Queries;
 use jeyofdev\wp\dingo\restaurant\inc\Sidebar;
 use jeyofdev\wp\dingo\restaurant\inc\Styles;
 use jeyofdev\wp\dingo\restaurant\inc\Supports;
+use jeyofdev\wp\dingo\restaurant\inc\Taxonomies;
 
 
 
@@ -31,5 +32,6 @@ class Site extends TimberSite
         Styles::load();
         Queries::load();
         PostTypes::load();
+        Taxonomies::load();
     }
 }

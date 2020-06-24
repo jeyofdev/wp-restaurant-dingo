@@ -98,26 +98,26 @@
     }
 
     .single_food_item {
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
         background-color: $white_color;
 
         @media #{$small_mobile} {
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             padding: 10px;
         }
 
         @media #{$large_mobile} {
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             padding: 10px;
         }
 
         @media #{$tab_device} {
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
             padding: 10px;
         }
 
         @media #{$medium_device} {
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
         }
 
         img {
@@ -200,5 +200,32 @@
                 }
             }
         }
+    }
+}
+
+.single-member {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 30px;
+
+    @media #{$small_mobile} {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    @media #{$large_mobile} {
+        row-gap: 20px;
+    }
+
+    @media #{$tab_device} {
+        row-gap: 20px;
+    }
+
+    @media #{$medium_device} {
+        gap: 30px;
+    }
+
+    &.active {
+        display: grid !important;
     }
 }

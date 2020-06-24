@@ -5,7 +5,7 @@ namespace jeyofdev\wp\dingo\restaurant\inc;
 
 
 /**
- * Class which manages the images
+ * Class which manages the post types
  */
 class PostTypes {
 
@@ -24,7 +24,7 @@ class PostTypes {
 
 
     /**
-     * Registers a post type
+     * Registers post types
      *
      * @return void
      */
@@ -77,6 +77,31 @@ class PostTypes {
             "supports" => ["title", "editor", "thumbnail"],
             "show_in_rest" => true,
             "taxonomies" => [],
+            "has_archive" => false
+        ]);
+
+        register_post_type("food_menu", [
+            "label" => __("Food Menus", "dingo"),
+            "labels" => [
+                "name"                     => __("Food Menus", "dingo"),
+                "singular_name"            => __("Food Menu", "dingo"),
+                "edit_item"                => __("Edit food menu", "dingo"),
+                "new_item"                 => __("New food menu", "dingo"),
+                "view_item"                => __("View food menu", "dingo"),
+                "view_items"               => __("View food menus", "dingo"),
+                "search_items"             => __("Search food menus", "dingo"),
+                "not_found"                => __("No food menus found.", "dingo"),
+                "not_found_in_trash"       => __("No food menus found in trash.", "dingo"),
+                "all_items"                => __("All food menus", "dingo")
+            ],
+            "public" => true,
+            "hierarchical" => false,
+            "exclude_from_search" => true,
+            "menu_position" => 25,
+            "menu_icon" => "dashicons-admin-users",
+            "supports" => ["title", "editor", "thumbnail"],
+            "show_in_rest" => false,
+            "taxonomies" => ["food_menu_type"],
             "has_archive" => false
         ]);
     }

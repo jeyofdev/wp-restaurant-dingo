@@ -24,7 +24,7 @@ $context["chefs"] = Timber::get_posts([
     "posts_per_page" => 3,
     "order" => "DESC"
 ]);
-$context["post_chefs"] = Timber::get_post([
+$context["chefs_page"] = Timber::get_post([
     "post_type" => "page",
     "name" => "chefs"
 ]);

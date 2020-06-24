@@ -6,6 +6,6 @@
     {% for post in posts %}
         {% include "parts/about.twig" %}
         {% include "parts/testimonials.twig" %}
-        {% include "parts/chefs.twig" with { post: section_chefs } %}
+        {% include "parts/chefs.twig" with { post: chefs_page } %}
     {% endfor %}
 {% endblock body %}

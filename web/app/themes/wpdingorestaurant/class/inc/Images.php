@@ -22,6 +22,7 @@ class Images {
             add_image_size("chef_thumbnail", 360, 360, true);
             add_image_size("testimonial_avatar", 140, 140, true);
             add_image_size("about_image_content", 600, 600, true);
+            add_image_size("food_menu_thumbnail", 165, 163, true);
         });
     }
 }

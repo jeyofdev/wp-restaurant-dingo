@@ -1,0 +1,14 @@
+{% for menu in food_menus %}
+    {% for menu_term in menu.terms %}
+        {% if menu_term.name is same as (term.name) %}
+            <div class="single_food_item media">
+                <img src="{{ menu.thumbnail.src|resize("food_menu_thumbnail") }}" class="mr-3" alt="">
+                <div class="media-body align-self-center">
+                    <h3>{{ menu.title }}</h3>
+                    <p>{{ menu.content|raw }}</p>
+                    <h5>{{ __("$", "dingo") ~ menu.price}}</h5>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endfor %}

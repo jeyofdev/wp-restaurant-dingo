@@ -1,0 +1,52 @@
+<section class="food_menu gray_bg">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="section_tittle">
+                    <p>{{ post.food_menus_section_subtitle }}</p>
+                    <h2>{{ post.food_menus_section_title }}</h2>
+                </div>
+            </div>
+
+
+            <!-- food menus nav -->
+            <div class="col-lg-6">
+                <div class="nav nav-tabs food_menu_nav" id="myTab" role="tablist">
+
+                    <a class="active" id="Special-tab" data-toggle="tab" href="#{{ (terms|first).name }}" role="tab"
+                    aria-controls="{{ (terms|first).name }}" aria-selected="false">{{ (terms|first).name }} <img src="{{ theme.link ~ '/assets/images/icon/play.svg' }}" alt="play"></a>
+
+                    {% for term in terms %}
+                        {% if term is not same as (terms|first) %}
+                            <a id="Sneaks-tab" data-toggle="tab" href="#{{ term.name }}" role="tab" aria-controls="{{ term.name }}"
+                            aria-selected="false">{{ term.name }} <img src="{{ theme.link ~ '/assets/images/icon/play.svg' }}" alt="play"></a>
+                        {% endif %}
+                    {% endfor %}
+
+                    
+                </div>
+            </div>
+
+
+            <!--  food menus items-->
+            {% if food_menus|length > 0 %}
+                <div class="col-lg-12">
+                    <div class="tab-content" id="myTabContent">
+                        <!--  display the menus corresponding to the first term when the page loads -->
+                        {% set term = terms|first %}
+                        <div class="tab-pane fade show active single-member" id="{{ term.name }}" role="tabpanel" aria-labelledby="{{ term.name }}-tab">
+                            {% include "parts/food-menu-single.twig" %}
+                        </div>
+
+                        <!--  hide the menus corresponding to the other terms when the page loads -->
+                        {% for term in terms %}
+                            <div class="tab-pane fade single-member" id="{{ term.name }}" role="tabpanel" aria-labelledby="{{ term.name }}-tab">
+                                {% include "parts/food-menu-single.twig" %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

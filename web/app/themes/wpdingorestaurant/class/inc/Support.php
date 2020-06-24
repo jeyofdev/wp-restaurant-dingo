@@ -18,7 +18,7 @@ class Supports {
     {
         add_action("after_setup_theme", function () {
             add_theme_support("menus");
-            add_theme_support("post-thumbnails", ["post", "chef", "testimonial"]);
+            add_theme_support("post-thumbnails", ["post", "food_menu", "chef", "testimonial"]);
         });
     }
 }
