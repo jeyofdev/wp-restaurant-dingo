@@ -4,7 +4,7 @@
 
     // background
     $('.breadcrumb_bg, .intro_video_bg').each(function () {
-        var bg = $(this).data('setbg');
+        var bg = $(this).data('setbg')
         $(this).css({
             'background-image': 'url(' + bg + ')',
             'background-position': 'center',
@@ -13,9 +13,8 @@
         })
     })
 
-    $('.about_bg').each(function () {
+    $('.page-template-template-about .about_bg').each(function () {
         var bg = $(this).data('setbg')
-        var str = 'cover'
         document.styleSheets[0].addRule('.about_bg:after', 'background-image: url(' + bg + ') !important;')
     })
 

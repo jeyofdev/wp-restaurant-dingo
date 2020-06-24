@@ -2,6 +2,7 @@
 
 {% block body %}
     {% for post in posts %}
+        {% include "parts/about.twig" with { post: about_page } %}
         {% include "parts/video.twig" with { post: chefs_page } %}
         {% include "parts/food-menus.twig" with { post: food_menus_page, terms: food_menus_terms } %}
         {% include "parts/chefs.twig" with { post: chefs_page } %}
