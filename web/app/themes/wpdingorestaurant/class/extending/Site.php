@@ -13,8 +13,7 @@ use jeyofdev\wp\dingo\restaurant\inc\Sidebar;
 use jeyofdev\wp\dingo\restaurant\inc\Styles;
 use jeyofdev\wp\dingo\restaurant\inc\Supports;
 use jeyofdev\wp\dingo\restaurant\inc\Taxonomies;
-
-
+use jeyofdev\wp\dingo\restaurant\inc\Title;
 
 /**
  * Class which manages the useful information of the application
@@ -25,6 +24,7 @@ class Site extends TimberSite
     {
         parent::__construct();
 
+        Title::load();
         Supports::add();
         Menus::register();
         Assets::load();
