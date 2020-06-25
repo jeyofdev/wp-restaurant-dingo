@@ -12,3 +12,4 @@ import 'jquery-validation'
 // app
 import './app/contact.js'
 import './app/main.js'
+import './app/contact-form'

@@ -44,12 +44,34 @@
 }
 
 .form-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-auto-flow: dense;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    .wpcf7-response-output {
+        margin-top: 0;
+    }
+
     label {
         font-size: 14px;
+
+        &.error {
+            color: $danger;
+            margin-top: .5rem;
+        }
+    }
+
+    .full {
+        grid-column: 1 / -1;
     }
 
     .form-group {
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
 
     .contact-section {
@@ -69,6 +91,10 @@
         &:focus {
             outline: 0;
             box-shadow: none;
+
+            &::placeholder {
+                color: transparent;
+            }
         }
 
         &::placeholder {

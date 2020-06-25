@@ -5,14 +5,7 @@
     {{ args.after_title|raw }}
 
     <div class="opening_hours">
-        {% for d_key, day in days %}
-            {% for h_key, hours in opening_hours %}
-                {% if h_key is same as (d_key) %}
-                    <p><span>{{ day }}</span> : {{ hours }}</p>
-                {% endif %}
-            {% endfor %}
-            
-        {% endfor %}
+        {{ format_hours(days, opening_hours) | raw}}
     </div>
 
 {{ args.after_widget|raw }}

@@ -18,6 +18,7 @@ class Styles {
     {
         self::remove_style_attr_to_widget_tag_cloud();
         self::remove_tag_p();
+        self::contact_form_remove_span();
     }
 
 
@@ -46,5 +47,23 @@ class Styles {
     public static function remove_tag_p () : void
     {
         remove_filter("the_content", "wpautop");
+    }
+
+
+
+    /**
+     * Contact form 7 remove span
+     */
+    public static function contact_form_remove_span () : void
+    {
+        add_filter("wpcf7_form_elements", function( string $content)
+        {
+            $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+            $content = str_replace('<br />', '', $content);
+            $content = str_replace('<p>', '', $content);
+            $content = str_replace('</p>', '', $content);
+
+            return $content;
+        });
     }
 }

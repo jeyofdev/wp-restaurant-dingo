@@ -3,6 +3,7 @@
 namespace jeyofdev\wp\dingo\restaurant\extending\twig;
 
 use \DateTime;
+use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
 use Timber\Post;
 use Twig\Environment;
 use Twig\TwigFunction;
@@ -42,6 +43,8 @@ class Functions
         self::next_post_link();
         self::single_cat_title();
         self::get_day_link();
+        self::format_address();
+        self::format_hours();
     }
 
 
@@ -245,6 +248,48 @@ class Functions
             $archive_day   = get_the_time($date->format("d"), $post); 
             
             return esc_url(get_day_link($archive_year, $archive_month, $archive_day));
+        }));
+    }
+
+
+
+    /**
+     * Format the display of the address in the contact page 
+     *
+     * @return void
+     */
+    public static function format_address () : void
+    {
+        self::$twig->addFunction(new TwigFunction("format_address", function (string $address) {
+            $address = explode(". ", $address);
+
+            $output = '<h3>' . $address[1] . '</h3>';
+            $output .= '<p>' . $address[0] . '</p>';
+
+            return $output;
+        }));
+    }
+
+
+
+    /**
+     * Format the display of opening hours in the footer
+     *
+     * @return void
+     */
+    public static function format_hours () : void {
+        self::$twig->addFunction(new TwigFunction("format_hours", function (array $days, array $opening_hours) {
+            $output = '';
+
+            foreach ($days as $d_key => $day) {
+                foreach ($opening_hours as $h_key => $hour) {
+                    if ($h_key === $d_key) {
+                        $output .= '<p><span>' . $day . '</span> : ' . $hour . '</p>';
+                    }
+                }
+            }
+
+            return $output;
         }));
     }
 }
