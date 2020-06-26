@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    {% include "parts/breadcrumb.twig" with { "title": "Experienced Chefs" } %}
+    {% include "parts/breadcrumb.twig" with { "title": wp_title } %}
 
     {% for post in posts %}
         {% include "parts/chefs.twig" %}

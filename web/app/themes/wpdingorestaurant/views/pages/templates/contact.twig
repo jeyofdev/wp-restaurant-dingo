@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    {% include "parts/breadcrumb.twig" with { "title": "Contact Us" } %}
+    {% include "parts/breadcrumb.twig" with { "title": wp_title } %}
 
     {% for post in posts %}
         <section class="contact-section section_padding">

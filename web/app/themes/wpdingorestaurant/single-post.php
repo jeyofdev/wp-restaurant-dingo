@@ -23,5 +23,4 @@ $context["comment-form"] = new CommentForm();
 $templates = "pages/single-post.twig";
 
 
-
 Timber::render($templates, $context);

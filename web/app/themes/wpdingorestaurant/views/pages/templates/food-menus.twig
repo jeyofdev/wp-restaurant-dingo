@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    {% include "parts/breadcrumb.twig" with { "title": "Food Menu" } %}
+    {% include "parts/breadcrumb.twig" with { "title": wp_title } %}
 
     {% for post in posts %}
         {% include "parts/food-menus.twig" with { terms: food_menus_terms } %}

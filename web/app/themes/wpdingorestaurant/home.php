@@ -17,5 +17,4 @@ $context["page"] = new Page();
 $templates = "pages/home.twig";
 
 
-
 Timber::render($templates, $context);

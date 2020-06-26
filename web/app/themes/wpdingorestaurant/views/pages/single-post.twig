@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    {% include "parts/breadcrumb.twig" with { "title": __("Our Blog", "dingo") } %}
+    {% include "parts/breadcrumb.twig" with { "title": page.home_title } %}
 
     <section class="blog_area single-post-area section_padding">
         <div class="container">
