@@ -7,13 +7,13 @@
                 {{ get_avatar(43) | raw }}
             </div>
             <div class="desc">
-                <p class="comment">{{ comment.comment_content }}</p>
+                <p class="comment">{{ comment.comment_content | raw }}</p>
                 <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                         <h5>
                             <a href="#" class="text-capitalize">{{ comment.author.name }}</a>
                         </h5>
-                        <p class="date">{{ comment.date | date("F d, Y") }} at {{ comment.time | date("G:i") }} </p>
+                        <p class="date">{{ comment.date | date(options.date_format) ~ __(" at ", "dingo") ~ comment.time | date(options.time_format) }} </p>
                     </div>
                     <div class="reply-btn">
                         {{ comment.reply_link | raw }}

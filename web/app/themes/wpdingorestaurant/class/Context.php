@@ -21,6 +21,10 @@ class Context {
     public static function add () : void
     {
         add_filter("timber/context", function (array $context) {
+            $context["options"] = [
+                "date_format" => get_option("date_format"),
+                "time_format" => get_option("time_format"),
+            ];
             $context["menu"] = new Menu("primary");
 
             if (is_home() || is_single() || is_archive() || is_search()) {
