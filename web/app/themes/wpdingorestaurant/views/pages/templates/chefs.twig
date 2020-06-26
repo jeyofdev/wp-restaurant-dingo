@@ -4,7 +4,7 @@
     {% include "parts/breadcrumb.twig" with { "title": wp_title } %}
 
     {% for post in posts %}
-        {% include "parts/chefs.twig" %}
-        {% include "parts/video.twig" %}
+        {% include "parts/sections/chefs.twig" %}
+        {% include "parts/sections/video.twig" %}
     {% endfor %}
 {% endblock body %}

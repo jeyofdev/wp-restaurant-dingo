@@ -4,8 +4,8 @@
     {% include "parts/breadcrumb.twig" with { "title": wp_title } %}
 
     {% for post in posts %}
-        {% include "parts/about.twig" %}
-        {% include "parts/testimonials.twig" %}
-        {% include "parts/chefs.twig" with { post: chefs_page } %}
+        {% include "parts/sections/about.twig" %}
+        {% include "parts/sections/testimonials.twig" %}
+        {% include "parts/sections/chefs.twig" with { post: chefs_page } %}
     {% endfor %}
 {% endblock body %}

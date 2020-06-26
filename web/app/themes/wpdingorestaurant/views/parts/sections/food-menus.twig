@@ -35,13 +35,13 @@
                         <!--  display the menus corresponding to the first term when the page loads -->
                         {% set term = terms|first %}
                         <div class="tab-pane fade show active single-member" id="{{ term.name }}" role="tabpanel" aria-labelledby="{{ term.name }}-tab">
-                            {% include "parts/food-menu-single.twig" %}
+                            {% include "parts/sections/single/food-menu-single.twig" %}
                         </div>
 
                         <!--  hide the menus corresponding to the other terms when the page loads -->
                         {% for term in terms %}
                             <div class="tab-pane fade single-member" id="{{ term.name }}" role="tabpanel" aria-labelledby="{{ term.name }}-tab">
-                                {% include "parts/food-menu-single.twig" %}
+                                {% include "parts/sections/single/food-menu-single.twig" %}
                             </div>
                         {% endfor %}
                     </div>

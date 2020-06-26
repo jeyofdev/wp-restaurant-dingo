@@ -2,5 +2,5 @@
 
 {% block body %}
     {% include "parts/breadcrumb.twig" with { "title": __("Search results", "dingo") } %}
-    {% include "parts/posts-list.twig" with {"no_posts": __("Your search contains no results", "dingo") } %}
+    {% include "parts/posts/posts-list.twig" with {"no_posts": __("Your search contains no results", "dingo") } %}
 {% endblock body %}

@@ -2,13 +2,13 @@
 
 {% block body %}
     {% for post in posts %}
-        {% include "parts/home_hero.twig" with { video: chefs_page } %}
-        {% include "parts/featured_food_menus.twig" %}
-        {% include "parts/about.twig" with { post: about_page } %}
-        {% include "parts/video.twig" with { post: chefs_page } %}
-        {% include "parts/food-menus.twig" with { post: food_menus_page, terms: food_menus_terms } %}
-        {% include "parts/chefs.twig" with { post: chefs_page } %}
-        {% include "parts/testimonials.twig"  with { post: about_page } %}
-        {% include "parts/blog.twig" %}
+        {% include "parts/sections/home_hero.twig" with { video: chefs_page } %}
+        {% include "parts/sections/featured_food_menus.twig" %}
+        {% include "parts/sections/about.twig" with { post: about_page } %}
+        {% include "parts/sections/video.twig" with { post: chefs_page } %}
+        {% include "parts/sections/food-menus.twig" with { post: food_menus_page, terms: food_menus_terms } %}
+        {% include "parts/sections/chefs.twig" with { post: chefs_page } %}
+        {% include "parts/sections/testimonials.twig"  with { post: about_page } %}
+        {% include "parts/posts/featured-posts.twig" %}
     {% endfor %}
 {% endblock body %}

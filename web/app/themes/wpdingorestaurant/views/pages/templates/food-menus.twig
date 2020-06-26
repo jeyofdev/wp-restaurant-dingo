@@ -4,7 +4,7 @@
     {% include "parts/breadcrumb.twig" with { "title": wp_title } %}
 
     {% for post in posts %}
-        {% include "parts/food-menus.twig" with { terms: food_menus_terms } %}
-        {% include "parts/video.twig" with { post: chefs_page } %}
+        {% include "parts/sections/food-menus.twig" with { terms: food_menus_terms } %}
+        {% include "parts/sections/video.twig" with { post: chefs_page } %}
     {% endfor %}
 {% endblock body %}
