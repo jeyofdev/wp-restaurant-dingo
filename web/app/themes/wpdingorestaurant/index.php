@@ -4,14 +4,11 @@
  * The main template file
  */
 
-use Timber\Timber;
-use jeyofdev\wp\dingo\restaurant\extending\Site;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 
 $context = Timber::context();
-$context["site"] = new Site();
-
 $templates = "pages/index.twig";
 
 

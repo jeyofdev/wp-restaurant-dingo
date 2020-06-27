@@ -2,9 +2,10 @@
 
 namespace jeyofdev\wp\dingo\restaurant;
 
-use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
 use Timber\Menu;
-use Timber\Timber;
+use jeyofdev\wp\dingo\restaurant\extending\Site;
+use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 
@@ -14,31 +15,54 @@ use Timber\Timber;
 class Context {
 
     /**
-     * Add information to context
-     *
-     * @return void
+     * @var array
      */
-    public static function add () : void
+    public $context;
+
+
+
+    public function __construct ()
     {
-        add_filter("timber/context", function (array $context) {
-            $context["options"] = [
+        add_filter("timber/context", function ($context) {
+            $this->context = $context;
+
+            $this->add("site", new Site());
+
+            $this->add("options", [
                 "date_format" => get_option("date_format"),
                 "time_format" => get_option("time_format"),
-            ];
-            $context["menu"] = new Menu("primary");
+            ]);
+
+            $this->add("menu", new Menu("primary"));
 
             if (is_home() || is_single() || is_archive() || is_search()) {
-                $context["dynamic_sidebar_blog"] = Timber::get_widgets("blog");
+                $this->add("dynamic_sidebar_blog", Timber::get_widgets("blog"));
             }
 
-            $context["dynamic_sidebar_footer"] = Timber::get_widgets("footer");
-            $context["rs"] = [
+            $this->add("dynamic_sidebar_footer", Timber::get_widgets("footer"));
+            $this->add("rs", [
                 "facebook" => get_option(RestaurantSettings::FACEBOOK),
                 "twitter" => get_option(RestaurantSettings::TWITTER),
                 "instagram" => get_option(RestaurantSettings::INSTAGRAM)
-            ];
+            ]);
 
-            return $context;
+            return $this->context;
         });
     }
+
+
+
+    /**
+     * Add informations to context
+     *
+     * @param string $key
+     * @param mixed $value
+     * 
+     * @return self
+     */
+    public function add (string $key, $value) : self
+    {
+        $this->context[$key] =  $value;
+        return $this;
+    } 
 }

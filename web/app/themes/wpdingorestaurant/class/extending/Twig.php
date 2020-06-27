@@ -3,6 +3,8 @@
 namespace jeyofdev\wp\dingo\restaurant\extending;
 
 use Twig\Environment;
+use Timber\Twig_Function;
+use Timber\Twig as TimberTwig;
 use jeyofdev\wp\dingo\restaurant\extending\twig\Filters;
 use jeyofdev\wp\dingo\restaurant\extending\twig\Functions;
 
@@ -11,39 +13,61 @@ use jeyofdev\wp\dingo\restaurant\extending\twig\Functions;
 /**
  * Class which allows to add functionality to Twig
  */
-class Twig
+class Twig extends TimberTwig
 {
-    public function __construct ()
-    {
-        add_filter("timber/twig", function (Environment $twig) {
-            $this->add_function($twig);
-            $this->add_filter($twig);
+    /**
+	 * @codeCoverageIgnore
+	 */
+	public static function init() {
+		$self = new self();
 
-            return $twig;
-        } );
-    }
+		add_action( 'timber/twig/filters', array( $self, 'add_timber_filters' ) );
+		add_action( 'timber/twig/functions', array( $self, 'add_timber_functions' ) );
+		add_action( 'timber/twig/escapers', array( $self, 'add_timber_escapers' ) );
+	}
 
 
 
     /**
-     * Add all new functions to Twig
-     *
-     * @return void
-     */
-    private function add_function (Environment $twig) : void
-    {
-        Functions::add($twig);
+	 * Adds functions to Twig.
+	 *
+	 * @param Environment $twig The Twig Environment
+     * 
+	 * @return Environment
+	 */
+	
+    public function add_timber_functions($twig) {
+        $twig->addFunction(new Twig_Function("previous_post_link", "previous_post_link"));
+        $twig->addFunction(new Twig_Function("next_post_link", "next_post_link"));
+        $twig->addFunction(new Twig_Function("single_cat_title", "single_cat_title"));
+        $twig->addFunction(new Twig_Function("get_avatar", "get_avatar"));
+
+        Functions::dump($twig);
+        Functions::dd($twig);
+        Functions::add_class($twig);
+        Functions::comments_number($twig);
+        Functions::category_by_post($twig);
+        Functions::paginate_links($twig);
+        Functions::get_day_link($twig);
+        Functions::format_address($twig);
+        Functions::format_hours($twig);
+
+		return $twig;
     }
 
 
 
-    /**
-     * Add all new filters to Twig
-     *
-     * @return void
-     */
-    private function add_filter (Environment $twig) : void
-    {
-        Filters::add($twig);
-    }
+	/**
+	 * Adds filters to Twig
+	 *
+	 * @param Environment $twig The Twig Environment
+     * 
+	 * @return Environment
+	 */
+    public function add_timber_filters($twig) {
+        Filters::chars($twig);
+        Filters::hashtag($twig);
+
+		return $twig;
+	}
 }

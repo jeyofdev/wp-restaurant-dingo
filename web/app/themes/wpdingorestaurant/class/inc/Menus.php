@@ -14,7 +14,7 @@ class Menus {
      *
      * @return void
      */
-    public static function register () : void
+    public static function init () : void
     {
         add_action("init", function () {
             register_nav_menu("primary", __("main navigation", "dingo"));

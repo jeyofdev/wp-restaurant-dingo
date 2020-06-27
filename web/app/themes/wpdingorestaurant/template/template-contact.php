@@ -5,9 +5,9 @@
  * Template Post Type: page
  */
 
-use Timber\Timber;
 use jeyofdev\wp\dingo\restaurant\extending\Site;
 use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 

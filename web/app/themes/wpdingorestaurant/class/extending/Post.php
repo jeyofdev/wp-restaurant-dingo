@@ -27,7 +27,7 @@ class Post extends TimberPost
     public function __construct ($pid = null)
     {
         parent::__construct($pid);
-        Pagination::load();
+        Pagination::init();
     }
 
 

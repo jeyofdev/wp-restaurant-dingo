@@ -14,7 +14,7 @@ class Taxonomies {
      *
      * @return void
      */
-    public static function load () : void
+    public static function init () : void
     {
         add_action("init", function () {
             self::register_taxonomy();

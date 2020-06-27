@@ -3,8 +3,8 @@
 namespace jeyofdev\wp\dingo\restaurant\widgets;
 
 use \WP_Widget;
-use Timber\Timber;
 use jeyofdev\wp\dingo\restaurant\extending\Post;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 

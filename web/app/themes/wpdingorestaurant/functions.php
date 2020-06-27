@@ -1,10 +1,6 @@
 <?php
 
-use Timber\Timber;
-use jeyofdev\wp\dingo\restaurant\Context;
-use jeyofdev\wp\dingo\restaurant\customize\Customizer;
-use jeyofdev\wp\dingo\restaurant\extending\Site;
-use jeyofdev\wp\dingo\restaurant\extending\Twig;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 
@@ -12,10 +8,3 @@ use jeyofdev\wp\dingo\restaurant\extending\Twig;
 $timber = new Timber();
 Timber::$autoescape = true;
 Timber::$dirname = "views";
-
-
-
-new Twig();
-new Site();
-new Customizer();
-Context::add();

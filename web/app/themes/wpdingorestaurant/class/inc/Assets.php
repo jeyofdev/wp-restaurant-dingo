@@ -13,7 +13,7 @@ class Assets {
      *
      * @return void
      */
-    public static function load () : void
+    public static function init () : void
     {
         add_action("wp_enqueue_scripts", function () {
             wp_enqueue_script("dingo_script", get_template_directory_uri() . "/assets/scripts/app.js", [], true, true);

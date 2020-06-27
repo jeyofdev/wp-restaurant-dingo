@@ -9,7 +9,7 @@ namespace jeyofdev\wp\dingo\restaurant\inc;
  */
 class Title {
 
-    public static function load () : void
+    public static function init () : void
     {
         self::document_title_separator();
     }

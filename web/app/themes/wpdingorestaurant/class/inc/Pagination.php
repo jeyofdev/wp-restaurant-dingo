@@ -2,7 +2,7 @@
 
 namespace jeyofdev\wp\dingo\restaurant\inc;
 
-use jeyofdev\wp\dingo\restaurant\extending\Post;
+
 
 /**
  * Class which manages the paginations
@@ -14,7 +14,7 @@ class Pagination {
      *
      * @return void
      */
-    public static function load () : void
+    public static function init () : void
     {
         self::previous_post_link();
         self::next_post_link();

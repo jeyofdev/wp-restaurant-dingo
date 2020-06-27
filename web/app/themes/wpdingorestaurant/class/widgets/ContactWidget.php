@@ -4,7 +4,7 @@ namespace jeyofdev\wp\dingo\restaurant\widgets;
 
 use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
 use \WP_Widget;
-use Timber\Timber;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 
@@ -50,7 +50,7 @@ class ContactWidget extends WP_Widget {
         }
 
         // title
-        $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("Categories", "dingo");
+        $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("Contact us", "dingo");
 
 
         Timber::render("widgets/contact-widget.twig", [

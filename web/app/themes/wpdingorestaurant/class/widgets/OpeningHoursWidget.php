@@ -3,9 +3,10 @@
 namespace jeyofdev\wp\dingo\restaurant\widgets;
 
 use \WP_Widget;
-use Timber\Timber;
-use jeyofdev\wp\dingo\restaurant\extending\Post;
 use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
+
+
 
 /**
  * Class which manages the recent posts widget
@@ -50,7 +51,7 @@ class OpeningHoursWidget extends WP_Widget {
         }
 
         // title
-        $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("Recent Post", "dingo");
+        $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("Opening hours", "dingo");
 
         // days
         $days = [

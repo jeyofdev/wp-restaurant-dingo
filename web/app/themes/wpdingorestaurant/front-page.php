@@ -4,13 +4,11 @@
  * The front page template file
  */
 
-use Timber\Timber;
-use jeyofdev\wp\dingo\restaurant\extending\Site;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 
 $context = Timber::context();
-$context["site"] = new Site();
 $context["food_menus_page"] = Timber::get_post([
     "post_type" => "page",
     "name" => "menus"

@@ -16,7 +16,7 @@ class Queries {
      *
      * @return void
      */
-    public static function load () : void
+    public static function init () : void
     {
         self::set_search_args();
     }

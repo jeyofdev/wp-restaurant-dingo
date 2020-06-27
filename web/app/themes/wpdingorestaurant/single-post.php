@@ -4,18 +4,15 @@
  * The single post template file
  */
 
-use Timber\Timber;
-use jeyofdev\wp\dingo\restaurant\App\Page;
+
 use jeyofdev\wp\dingo\restaurant\App\Comment;
 use jeyofdev\wp\dingo\restaurant\extending\Post;
-use jeyofdev\wp\dingo\restaurant\extending\Site;
 use jeyofdev\wp\dingo\restaurant\App\CommentForm;
+use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
 
 $context = Timber::context();
-$context["site"] = new Site();
-$context["page"] = new Page();
 $context["post"] = new Post();
 $context["comment"] = new Comment();
 $context["comment-form"] = new CommentForm();

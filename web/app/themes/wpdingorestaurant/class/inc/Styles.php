@@ -14,7 +14,7 @@ class Styles {
      *
      * @return void
      */
-    public static function load () : void
+    public static function init () : void
     {
         self::remove_style_attr_to_widget_tag_cloud();
         self::remove_tag_p();

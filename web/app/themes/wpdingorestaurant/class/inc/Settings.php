@@ -17,7 +17,7 @@ class Settings
      *
      * @return void
      */
-    public static function load () : void
+    public static function init () : void
     {
         RestaurantSettings::register();
     }

@@ -14,7 +14,7 @@ class Supports {
      *
      * @return void
      */
-    public static function add () : void
+    public static function init () : void
     {
         add_action("after_setup_theme", function () {
             add_theme_support("title-tag");

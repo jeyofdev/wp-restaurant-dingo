@@ -4,7 +4,7 @@
     <div class="single-comment justify-content-between d-flex">
         <div class="user justify-content-start d-flex">
             <div class="thumb">
-                {{ get_avatar(43) | raw }}
+                {{ get_avatar(comment.ID, 43) | raw }}
             </div>
             <div class="desc">
                 <p class="comment">{{ comment.comment_content | raw }}</p>

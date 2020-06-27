@@ -3,10 +3,10 @@
 namespace jeyofdev\wp\dingo\restaurant\extending\twig;
 
 use \DateTime;
-use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
 use Timber\Post;
 use Twig\Environment;
 use Twig\TwigFunction;
+
 
 
 /**
@@ -15,50 +15,15 @@ use Twig\TwigFunction;
 class Functions
 {
     /**
-     * @var Environment $twig
-     */
-    public static $twig;
-
-
-
-    /**
-     * Set all new functions
-     *
-     * @param Environment $twig
-     * 
-     * @return void
-     */
-    public static function add (Environment $twig)
-    {
-        self::$twig = $twig;
-
-        self::dump();
-        self::dd();
-        self::add_class();
-        self::comments_number();
-        self::category_by_post();
-        self::get_avatar();
-        self::paginate_links();
-        self::prev_post_link();
-        self::next_post_link();
-        self::single_cat_title();
-        self::get_day_link();
-        self::format_address();
-        self::format_hours();
-    }
-
-
-
-    /**
      * Use the symfony dump function to replace the twig dump function
      *
      * @param Environment $twig
      * 
      * @return void
      */
-    public static function dump () : void
+    public static function dump (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("dump", function ($value) {
+        $twig->addFunction(new TwigFunction("dump", function ($value) {
             dump($value);
         }));
     }
@@ -69,11 +34,12 @@ class Functions
      * Use the symfony function dd for debug dump and die
      *
      * @param Environment $twig
+     * 
      * @return void
      */
-    public static function dd () : void
+    public static function dd (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("dd", function ($value) {
+        $twig->addFunction(new TwigFunction("dd", function ($value) {
             dd($value);
         }));
     }
@@ -87,9 +53,9 @@ class Functions
      * 
      * @return void
      */
-    public static function add_class () : void
+    public static function add_class (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("add_class", function ($trueClass, $falseClass) {
+        $twig->addFunction(new TwigFunction("add_class", function (string $trueClass, string $falseClass) {
             return is_front_page() ? $trueClass : $falseClass;
         }));
     }
@@ -103,9 +69,9 @@ class Functions
      * 
      * @return void
      */
-    public static function category_by_post () : void
+    public static function category_by_post (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("category_by_post", function (Post $post) {
+        $twig->addFunction(new TwigFunction("category_by_post", function (Post $post) {
             $categories = [];
 
             foreach ($post->categories as $category) {
@@ -125,24 +91,10 @@ class Functions
      * 
      * @return void
      */
-    public static function comments_number () : void
+    public static function comments_number (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("comments_number", function () {
+        $twig->addFunction(new TwigFunction("comments_number", function () {
             comments_number(sprintf(__("%d Comment", "dingo"), __("%d Comment", "dingo"), __("%d Comments", "dingo")));
-        }));
-    }
-
-
-
-    /**
-     * Add the user avatar
-     *
-     * @return void
-     */
-    public static function get_avatar () : void
-    {
-        self::$twig->addFunction(new TwigFunction("get_avatar", function (?int $size = 90) {
-            return get_avatar(get_the_author_meta("ID"), $size);
         }));
     }
 
@@ -151,11 +103,13 @@ class Functions
     /**
      * Retrieve paginated links for archive post pages.
      *
+     * @param Environment $twig
+     *
      * @return void
      */
-    public static function paginate_links () : void
+    public static function paginate_links (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("paginate_links", function () {
+        $twig->addFunction(new TwigFunction("paginate_links", function () {
             $pages = paginate_links([
                 "type" => "array",
                 "prev_text" => '<i class="ti-angle-left"></i>',
@@ -192,60 +146,20 @@ class Functions
 
 
     /**
-     * Displays the previous post link that is adjacent to the current post
-     *
-     * @return void
-     */
-    public static function prev_post_link () : void
-    {
-        self::$twig->addFunction(new TwigFunction("prev_post_link", function () {
-            previous_post_link();
-        }));
-    }
-
-
-
-    /**
-     * Display the next post link that is adjacent to the current post
-     *
-     * @return void
-     */
-    public static function next_post_link () : void
-    {
-        self::$twig->addFunction(new TwigFunction("next_post_link", function () {
-            next_post_link();
-        }));
-    }
-
-
-
-    /**
-     * Display or retrieve page title for category archive
-     *
-     * @return void
-     */
-    public static function single_cat_title () : void
-    {
-        self::$twig->addFunction(new TwigFunction("single_cat_title", function (?string $prefix = '', ?bool $display = true) {
-            return single_cat_title($prefix, $display);
-        }));
-    }
-
-
-
-    /**
      * Retrieves the permalink for the day archives with year and month.
      *
+     * @param Environment $twig
+     *
      * @return void
      */
-    public static function get_day_link () : void
+    public static function get_day_link (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("get_day_link", function ($post) {
-            $date = new DateTime($post->date);
+        $twig->addFunction(new TwigFunction("get_day_link", function (Post $post) {
+            $post_date = new DateTime($post->date);
 
-            $archive_year  = get_the_time($date->format("Y"), $post); 
-            $archive_month = get_the_time($date->format("m"), $post); 
-            $archive_day   = get_the_time($date->format("d"), $post); 
+            $archive_year  = get_the_time($post_date->format("Y"), $post); 
+            $archive_month = get_the_time($post_date->format("m"), $post); 
+            $archive_day   = get_the_time($post_date->format("d"), $post); 
             
             return esc_url(get_day_link($archive_year, $archive_month, $archive_day));
         }));
@@ -256,11 +170,13 @@ class Functions
     /**
      * Format the display of the address in the contact page 
      *
+     * @param Environment $twig
+     *
      * @return void
      */
-    public static function format_address () : void
+    public static function format_address (Environment $twig) : void
     {
-        self::$twig->addFunction(new TwigFunction("format_address", function (string $address) {
+        $twig->addFunction(new TwigFunction("format_address", function (string $address) {
             $address = explode(". ", $address);
 
             $output = '<h3>' . $address[1] . '</h3>';
@@ -275,10 +191,12 @@ class Functions
     /**
      * Format the display of opening hours in the footer
      *
+     * @param Environment $twig
+     *
      * @return void
      */
-    public static function format_hours () : void {
-        self::$twig->addFunction(new TwigFunction("format_hours", function (array $days, array $opening_hours) {
+    public static function format_hours (Environment $twig) : void {
+        $twig->addFunction(new TwigFunction("format_hours", function (array $days, array $opening_hours) {
             $output = '';
 
             foreach ($days as $d_key => $day) {

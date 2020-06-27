@@ -13,36 +13,15 @@ use Twig\Environment;
 class Filters
 {
     /**
-     * @var Environment $twig
-     */
-    public static $twig;
-
-
-
-    /**
-     * Set all new filters
-     *
-     * @param Environment $twig
-     * 
-     * @return void
-     */
-    public static function add (Environment $twig)
-    {
-        self::$twig = $twig;
-        self::chars();
-        self::hashtag();
-    }
-
-
-
-    /**
      * Display the excerpt of a text
      *
+     * @param Environment $twig
+     *
      * @return void
      */
-    public static function chars () : void
+    public static function chars (Environment $twig) : void
     {
-        self::$twig->addFilter(new TwigFilter("chars", function (string $text, ?int $limit = 20) {
+        $twig->addFilter(new TwigFilter("chars", function (string $text, ?int $limit = 20) {
             if (strlen($text) > $limit) {
                 $last_space = strpos($text, " ", $limit);
                 return substr($text, 0, $last_space) . "...";
@@ -57,11 +36,13 @@ class Filters
     /**
      * Format links to category archive pages by changing the class attribute and the label (adding a #)
      *
+     * @param Environment $twig
+     *
      * @return void
      */
-    public static function hashtag () : void
+    public static function hashtag (Environment $twig) : void
     {
-        self::$twig->addFilter(new TwigFilter("hashtag", function (string $text) {
+        $twig->addFilter(new TwigFilter("hashtag", function (string $text) {
             $content = explode(", ", $text);
             
             $newContent = [];
