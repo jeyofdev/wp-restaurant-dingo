@@ -1,0 +1,39 @@
+.wrap .wp-list-table.widefat.posts #the-list tr * {
+    vertical-align: middle;
+}
+
+
+/* =================== columns post type chef ==================== */
+
+.post-type-chef,
+.post-type-food_menu {
+    .manage-column {
+        &.column-thumbnail {
+            width: 9.5%;
+        }
+    }
+}
+
+
+
+/* =================== columns post type testimonial ==================== */
+
+.post-type-testimonial {
+    .manage-column {
+        &.column-testimonial_author {
+            width: 15%;
+        }
+    }
+}
+
+
+
+/* =================== columns post type food menu ==================== */
+
+.post-type-food_menu {
+    .manage-column {
+        &.column-types {
+            width: 15%;
+        }
+    }
+}

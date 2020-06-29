@@ -15,6 +15,7 @@ use jeyofdev\wp\dingo\restaurant\inc\Supports;
 use jeyofdev\wp\dingo\restaurant\inc\PostTypes;
 use jeyofdev\wp\dingo\restaurant\inc\Taxonomies;
 use jeyofdev\wp\dingo\restaurant\customize\Customizer;
+use jeyofdev\wp\dingo\restaurant\inc\Admin;
 
 
 
@@ -27,6 +28,7 @@ class Site extends TimberSite
     {
         parent::__construct();
 
+        Admin::init();
         Settings::init();
         Supports::init();
         Title::init();
