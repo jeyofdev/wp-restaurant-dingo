@@ -98,7 +98,7 @@ a {
     @include transform_time(.5s);
 
     &:hover {
-        color: $btn_bg !important;
+        // color: $btn_bg !important;
         text-decoration: none;
 
         @include transform_time(.5s);
@@ -177,7 +177,7 @@ button:focus,
     @include transform_time(1s);
 }
 
-.section_tittle {
+.section_title {
     margin-bottom: 70px;
 
     @media #{$small_mobile} {

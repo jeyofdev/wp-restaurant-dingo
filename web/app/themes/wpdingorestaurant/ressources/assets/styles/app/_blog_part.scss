@@ -105,24 +105,24 @@
             }
         }
 
-        h3 {
-            font-size: 24px;
+        a {
             color: rgb(44, 48, 51);
-            line-height: 1.458;
-            font-weight: 700;
-            margin-top: 20px;
-            margin-bottom: 0;
 
-            a {
-                color: rgb(44, 48, 51);
-            }
+            h3 {
+                font-size: 24px;
+                // color: rgb(44, 48, 51);
+                line-height: 1.458;
+                font-weight: 700;
+                margin-top: 20px;
+                margin-bottom: 0;
 
-            @media #{$small_mobile} {
-                font-size: 20px;
-            }
-
-            @media #{$large_mobile} {
-                font-size: 20px;
+                @media #{$small_mobile} {
+                    font-size: 20px;
+                }
+    
+                @media #{$large_mobile} {
+                    font-size: 20px;
+                }
             }
         }
 

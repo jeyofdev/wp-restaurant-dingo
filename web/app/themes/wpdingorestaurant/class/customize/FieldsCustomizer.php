@@ -133,7 +133,14 @@ class FieldsCustomizer
 	 */
     private function set_sections () : array
     {
-        $sections = [];
+        $sections = [
+			// Add advance color options
+            "dingo_color_section" => [
+                "title" => esc_html__("Color", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 30
+            ]
+		];
 
 		return $sections;
     }
@@ -147,7 +154,186 @@ class FieldsCustomizer
 	 */
     private function set_fields () : array
     {
-		$fields = [];
+		$fields = [
+			// Add primary color option
+			[
+				"type"        => "color",
+				"settings"    => "primary_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Primary color :", "dingo"),
+				"section"     => "dingo_color_section",
+                "default"     => "#ff6426",
+                "output" => [
+                    [
+                        "element"  => [
+							".main_menu .main-menu-item ul li a:hover",
+							".btn_1",
+							"a:hover",
+							".banner_part .banner_text h5",
+							".blog_item_section .single_blog_item:hover .btn_3",
+							"section h4",
+							"section h5",
+							".food_menu .nav-tabs .active",
+							".blog_item_section .single_blog_text a:hover h3",
+							".blog_area a:hover h2"
+							
+						],
+						"property" => "color",
+						"suffix" => "!important"
+					],
+					[
+                        "element"  => [
+							".btn_1:hover",
+							".single_page_btn",
+							".banner_part .banner_text .banner_btn_iner:hover .btn_2:after",
+							".section_title h2:after",
+							".chefs_part .single_blog_item .social_icon a:hover",
+							".review_part .owl-dots button.owl-dot.active",
+							".blog_right_sidebar .tag_cloud_widget ul li a:hover",
+							".blog_item_img .blog_item_date",
+							".button"
+						],
+                        "property" => "background-color"
+                    ],
+					[
+                        "element" => [
+							".menu_fixed .btn_1",
+							".single_page_btn:hover",
+							".chefs_part .single_blog_item .social_icon a:hover",
+							".button"
+						],
+                        "property" => "border-color",
+                    ]
+				]
+			],
+
+			// Add title color option
+			[
+				"type"        => "color",
+				"settings"    => "title_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Title color :", "dingo"),
+				"section"     => "dingo_color_section",
+                "default"     => "#2c3033",
+                "output" => [
+                    [
+                        "element"  => [
+							"h1", "h2", "h3", "h4", "h5", "h6",
+							".navbar-light .navbar-nav .nav-link", "section a", "footer a",
+							".section_title h2",
+							".blog_right_sidebar .widget_title",
+							".review_part .client_review_single .client_review_text h4",
+							".footer-area p span",
+							".single-post-area h4"
+						],
+						"property" => "color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add content color option
+			[
+				"type"        => "color",
+				"settings"    => "content_color_setting_hex",
+                "transport"   => "auto",
+				"label"       => esc_html__("Content color :", "dingo"),
+				"section"     => "dingo_color_section",
+                "default"     => "#555",
+                "output" => [
+                    [
+                        "element"  => [
+							"p", ".section_title p"
+						],
+						"property" => "color"
+					],
+				]
+			],
+
+			// Add content secondary color option
+			[
+				"type"        => "color",
+				"settings"    => "content_secondary_color_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Content secondary color :", "dingo"),
+				"section"     => "dingo_color_section",
+				"default"     => "#fff",
+				"output" => [
+					[
+						"element"  => [
+							".btn_1:hover",
+							".single_page_btn",
+							".intro_video_bg h2",
+							".breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2",
+							".blog_item_img .blog_item_date h3",
+							".chefs_part .single_blog_item .social_icon a:hover",
+							".blog_item_img .blog_item_date p",
+							".blog_right_sidebar .tag_cloud_widget ul li a:hover"
+						],
+						"property" => "color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add meta color option
+			[
+				"type"        => "color",
+				"settings"    => "meta_color_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Meta color :", "dingo"),
+				"section"     => "dingo_color_section",
+				"default"     => "#666",
+				"output" => [
+					[
+						"element"  => [
+							".blog-info-link li a"
+						],
+						"property" => "color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add pagination color option
+			[
+				"type"        => "color",
+				"settings"    => "pagination_color_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Pagination color :", "dingo"),
+				"section"     => "dingo_color_section",
+				"default"     => "#8a8a8a",
+				"output" => [
+					[
+						"element"  => [
+							".blog-pagination .page-link",
+							".contact-info .media-body p"
+						],
+						"property" => "color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add widget link color option
+			[
+				"type"        => "color",
+				"settings"    => "widgetlink_color_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Widget link color :", "dingo"),
+				"section"     => "dingo_color_section",
+				"default"     => "#555",
+				"output" => [
+					[
+						"element"  => [
+							".blog_right_sidebar .post_category_widget .cat-list li a"
+						],
+						"property" => "color",
+						"suffix" => "!important"
+					],
+				]
+			]
+		];
 
 		return $fields;
 	}

@@ -748,11 +748,11 @@
                     padding-top: 15px;
                 }
 
-                &:hover {
-                    a {
-                        color: $btn_bg !important;
-                    }
-                }
+                // &:hover {
+                //     a {
+                //         color: $btn_bg !important;
+                //     }
+                // }
             }
         }
     }
@@ -808,7 +808,7 @@
                     font-size: 13px;
 
                     &:hover {
-                        background: $btn_bg !important;
+                        // background: $btn_bg !important;
                         color: #fff !important;
                     }
                 }

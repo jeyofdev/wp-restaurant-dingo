@@ -173,7 +173,7 @@
 
     &:hover {
         color: $white_color;
-        background-color: #e04000;
+        // background-color: darken($common_color, 13.53);
 
         a {
             color: $white_color !important;
