@@ -11,7 +11,7 @@
         bottom: -250px;
         z-index: -1;
         // background: url(../../images/about_overlay.png) bottom right no-repeat;
-        background-size: 15% 65%;
+        background-size: 15% 65% !important;
         right: 0;
 
         @media #{$small_mobile} {

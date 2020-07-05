@@ -87,7 +87,7 @@
         // background: url(../../images/about_overlay.png) bottom right no-repeat;
         background-position: bottom right;
         background-repeat: no-repeat;
-        background-size: 15% 60%;
+        background-size: 15% 60% !important;
         right: 0;
 
         @media #{$small_mobile} {
@@ -103,7 +103,7 @@
         }
 
         @media #{$medium_device} {
-            background-size: 15% 50%;
+            background-size: 15% 50% !important;
         }
     }
 }

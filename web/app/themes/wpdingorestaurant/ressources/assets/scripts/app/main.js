@@ -1,14 +1,6 @@
 (function ($) {
     "use strict";
 
-
-    // background
-    $('.page-template-template-about .about_bg').each(function () {
-        var bg = $(this).data('setbg')
-        document.styleSheets[0].addRule('.page-template-template-about .about_bg:after', 'background-image: url(' + bg + ') !important;')
-    })
-
-
     $("#datepicker").datepicker();
 
 

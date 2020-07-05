@@ -133,12 +133,6 @@ register_extended_field_group([
             ->required()
             ->returnFormat("array")
             ->previewSize("medium")
-            ->library("all"),
-        Image::make(__("Background", "dingo"), "about_section_background")
-            ->instructions(__("Add a background image", "dingo"))
-            ->required()
-            ->returnFormat("array")
-            ->previewSize("medium")
             ->library("all")
     ],
     "location" => [

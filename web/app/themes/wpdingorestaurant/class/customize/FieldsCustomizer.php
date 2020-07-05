@@ -155,6 +155,13 @@ class FieldsCustomizer
 				"priority" => 50
 			],
 
+			// Add about section 
+            "dingo_about_section" => [
+                "title" => esc_html__("About section", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 60
+			],
+
 			// Add video section 
             "dingo_video_section" => [
                 "title" => esc_html__("Video section", "dingo"),
@@ -416,6 +423,30 @@ class FieldsCustomizer
 				"output" => [
 					[
 						"element"  => ".banner_part:after",
+					],
+				]
+			],
+
+			// Add about background image option
+			[
+				"type"        => "background",
+				"settings"    => "about_section_background_image_setting",
+				"transport"   => "auto",
+				"section"     => "dingo_about_section",
+				"default"     => [
+					"background-color"      => "rgba(255, 255, 255, 0)",
+					"background-image"      => "",
+					"background-repeat"     => "repeat",
+					"background-position"   => "center center",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
+				],
+				"output" => [
+					[
+						"element"  => [
+							".page-template-template-about .about_bg:after",
+							".exclusive_item_part:after"
+						],
 					],
 				]
 			],
