@@ -3,16 +3,6 @@
 
 
     // background
-    $('.intro_video_bg').each(function () {
-        var bg = $(this).data('setbg')
-        $(this).css({
-            'background-image': 'url(' + bg + ')',
-            'background-position': 'center',
-            'background-repeat': 'no-repeat',
-            'background-size': 'cover'
-        })
-    })
-
     $('.page-template-template-about .about_bg').each(function () {
         var bg = $(this).data('setbg')
         document.styleSheets[0].addRule('.page-template-template-about .about_bg:after', 'background-image: url(' + bg + ') !important;')

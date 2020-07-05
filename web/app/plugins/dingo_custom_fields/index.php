@@ -239,12 +239,6 @@ register_extended_field_group([
         Text::make(__("Title", "dingo"), "video_section_title")
             ->required()
             ->defaultValue(__("Expect The Best", "dingo")),
-        Image::make(__("Background", "dingo"), "video_background")
-            ->instructions(__("Add a background image", "dingo"))
-            ->required()
-            ->returnFormat("array")
-            ->previewSize("medium")
-            ->library("all"),
         Url::make(__("Video", "dingo"), "video_url")
             ->instructions(__("Add a youtubes presentation video", "dingo"))
             ->required()

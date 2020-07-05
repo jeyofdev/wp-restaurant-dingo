@@ -153,6 +153,13 @@ class FieldsCustomizer
                 "title" => esc_html__("Banner section", "dingo"),
 				"panel" => "dingo_theme_option",
 				"priority" => 50
+			],
+
+			// Add video section 
+            "dingo_video_section" => [
+                "title" => esc_html__("Video section", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 70
 			]
 		];
 
@@ -411,7 +418,28 @@ class FieldsCustomizer
 						"element"  => ".banner_part:after",
 					],
 				]
+			],
+
+			// Add section video background image option
+			[
+				"type"        => "background",
+				"settings"    => "video_section_background_image_setting",
+				"transport"   => "auto",
+				"section"     => "dingo_video_section",
+				"default"     => [
+					"background-color"      => "rgba(20, 20, 20, 0)",
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "center center",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
 				],
+				"output" => [
+					[
+						"element"  => ".intro_video_bg",
+					],
+				]
+			],
 		];
 
 		return $fields;
