@@ -3,7 +3,7 @@
     height: 880px;
     position: relative;
     background-repeat: no-repeat;
-    background-size: 41%;
+    background-size: 41% !important;
     background-position: top right;
 
     @media #{$small_mobile} {
@@ -25,7 +25,7 @@
     }
 
     @media #{$medium_device} {
-        background-size: 35%;
+        background-size: 35% !important;
         height: 650px;
     }
 

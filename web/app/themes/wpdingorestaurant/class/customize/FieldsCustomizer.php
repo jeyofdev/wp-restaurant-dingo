@@ -147,6 +147,13 @@ class FieldsCustomizer
 				"panel" => "dingo_theme_option",
 				"priority" => 40
 			],
+
+			// Add banner section 
+            "dingo_banner_section" => [
+                "title" => esc_html__("Banner section", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 50
+			]
 		];
 
 		return $sections;
@@ -361,6 +368,50 @@ class FieldsCustomizer
 					],
 				]
 			],
+
+			// Add banner background image option
+			[
+				"type"        => "background",
+				"settings"    => "banner_section_background_image_setting",
+				"label"       => esc_html__("Banner background_image :", "dingo"),
+				"transport"   => "auto",
+				"section"     => "dingo_banner_section",
+				"default"     => [
+					"background-color"      => "rgba(255, 255, 255, 0)",
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "right top",
+					"background-size"       => "contain",
+					"background-attachment" => "scroll",
+				],
+				"output" => [
+					[
+						"element"  => ".banner_bg",
+					],
+				]
+			],
+
+			// Add banner overlay option
+			[
+				"type"        => "background",
+				"settings"    => "banner_overlay_setting",
+				"label"       => esc_html__("Banner overlay :", "dingo"),
+				"transport"   => "auto",
+				"section"     => "dingo_banner_section",
+				"default"     => [
+					"background-color"      => "rgba(255, 255, 255, 0)",
+					"background-image"      => "",
+					"background-repeat"     => "no-repeat",
+					"background-position"   => "right bottom",
+					"background-size"       => "auto",
+					"background-attachment" => "scroll",
+				],
+				"output" => [
+					[
+						"element"  => ".banner_part:after",
+					],
+				]
+				],
 		];
 
 		return $fields;

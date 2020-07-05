@@ -272,18 +272,7 @@ register_extended_field_group([
             ->defaultValue(__("Deliciousness jumping into the mouth", "dingo")),
         Text::make(__("Subtitle", "dingo"), "home_top_section_subtitle")
             ->required()
-            ->defaultValue(__("Expensive But The Best", "dingo")),
-        Image::make(__("Background", "dingo"), "home_top_section_background")
-            ->instructions(__("Add a background image", "dingo"))
-            ->required()
-            ->returnFormat("array")
-            ->previewSize("medium")
-            ->library("all"),
-        Image::make(__("Background overlay", "dingo"), "home_top_section_background_overlay")
-            ->required()
-            ->returnFormat("array")
-            ->previewSize("medium")
-            ->library("all"),
+            ->defaultValue(__("Expensive But The Best", "dingo"))
     ],
     "location" => [
         Location::if("page_type", "==", "front_page")

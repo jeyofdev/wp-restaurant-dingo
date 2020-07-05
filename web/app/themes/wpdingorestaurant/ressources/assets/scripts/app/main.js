@@ -3,13 +3,6 @@
 
 
     // background
-    $('.banner_bg').each(function () {
-        var bg = $(this).data('setbg')
-        $(this).css({
-            'background-image': 'url(' + bg + ')'
-        })
-    })
-
     $('.intro_video_bg').each(function () {
         var bg = $(this).data('setbg')
         $(this).css({
@@ -23,11 +16,6 @@
     $('.page-template-template-about .about_bg').each(function () {
         var bg = $(this).data('setbg')
         document.styleSheets[0].addRule('.page-template-template-about .about_bg:after', 'background-image: url(' + bg + ') !important;')
-    })
-
-    $('.home .banner_part .overlay-bg').each(function () {
-        var bg = $(this).data('setbg')
-        document.styleSheets[0].addRule('.home .banner_part:after', 'background-image: url(' + bg + ') !important;')
     })
 
 
