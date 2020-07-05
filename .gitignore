@@ -13,6 +13,7 @@ web/.htaccess
 
 # Logs
 *.log
+yarn.lock
 web/app/themes/wpdingorestaurant/ressources/yarn.*
 
 # Dotenv
@@ -22,6 +23,7 @@ web/app/themes/wpdingorestaurant/ressources/yarn.*
 
 # Dependencies
 /vendor
+/node_modules/
 /web/app/themes/wpdingorestaurant/ressources/node_modules
 
 # WP-CLI

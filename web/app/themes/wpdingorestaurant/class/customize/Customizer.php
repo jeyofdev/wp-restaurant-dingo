@@ -2,83 +2,50 @@
 
 namespace jeyofdev\wp\dingo\restaurant\customize;
 
-use \WP_Customize_Manager;
-use \WP_Customize_Image_Control;
-
 
 
 /**
- * Class which manages the customization options
+ * Class which manages the customizer
  */
 class Customizer
 {
-    public function __construct()
+
+    public function __construct ()
     {
-        add_action("customize_register", [$this, "deregister"]);
-        add_action("customize_register", [$this, "customize_logo_register"]);
-        add_action("customize_register", [$this, "customize_breadcrumb_register"]);
+        InitCustomizer::init();
+        $this->init();
+
+        return $this->get_fields();
     }
 
 
 
     /**
-     * Remove customization options
+     * Initialize the customizer with Kirki
      *
-     * @param WP_Customize_Manager $manager
      * @return void
      */
-    public function deregister(WP_Customize_Manager $manager): void
+    private function init () : void
     {
-        $manager->remove_section("static_front_page");
+        if (!class_exists("Kirki")) {
+            require_once get_template_directory_uri() . "/class/customize/kirki/kirki.php";
+
+            /**
+             * Implement the theme options using Kirki.
+             */
+            new FieldsCustomizer();
+
+            add_filter("kirki_telemetry", "__return_false");
+        }
     }
 
 
 
     /**
-     * Add the logo customization option
-     *
-     * @param WP_Customize_Manager $wp_customize
-     * 
-     * @return void
+     * @return FieldsCustomizer|null
      */
-    public function customize_logo_register(WP_Customize_Manager $manager): void
+    private function get_fields () : ?FieldsCustomizer
     {
-        $manager->add_section("dingo_logo", [
-            "title" => __("Logo", "dingo")
-        ]);
-
-        $manager->add_setting("logo", [
-            "sanitise_callback" => "esc_url_raw"
-        ]);
-
-        $manager->add_control(new WP_Customize_Image_Control($manager, "logo", [
-            "section" => "dingo_logo",
-            "label" => __("Upload a logo", "dingo")
-        ]));
-    }
-
-
-
-    /**
-     * Add the option to customize the background of the breadcrumb
-     *
-     * @param WP_Customize_Manager $wp_customize
-     * 
-     * @return void
-     */
-    public function customize_breadcrumb_register(WP_Customize_Manager $manager): void
-    {
-        $manager->add_section("dingo_breadcrumb", [
-            "title" => __("breadcrumb", "dingo")
-        ]);
-
-        $manager->add_setting("breadcrumb-background-image", [
-            "sanitise_callback" => "esc_url_raw"
-        ]);
-
-        $manager->add_control(new WP_Customize_Image_Control($manager, "breadcrumb-background-image", [
-            "section" => "dingo_breadcrumb",
-            "label" => __("Background-color", "dingo")
-        ]));
+        return FieldsCustomizer::instance();
     }
 }
