@@ -10,7 +10,7 @@
         })
     })
 
-    $('.breadcrumb_bg, .intro_video_bg').each(function () {
+    $('.intro_video_bg').each(function () {
         var bg = $(this).data('setbg')
         $(this).css({
             'background-image': 'url(' + bg + ')',

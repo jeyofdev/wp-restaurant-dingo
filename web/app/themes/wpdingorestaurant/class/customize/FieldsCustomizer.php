@@ -139,7 +139,14 @@ class FieldsCustomizer
                 "title" => esc_html__("Color", "dingo"),
 				"panel" => "dingo_theme_option",
 				"priority" => 30
-            ]
+			],
+			
+			// Add breadcrumb section
+            "dingo_breadcrumb_section" => [
+                "title" => esc_html__("Breadcrumb", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 40
+			],
 		];
 
 		return $sections;
@@ -332,7 +339,28 @@ class FieldsCustomizer
 						"suffix" => "!important"
 					],
 				]
-			]
+			],
+
+			// Add breadcrumb background image option
+			[
+				"type"        => "background",
+				"settings"    => "breadcrumb_background_image_setting",
+				"transport"   => "auto",
+				"section"     => "dingo_breadcrumb_section",
+				"default"     => [
+					"background-color"      => "rgba(20, 20, 20, 0)",
+					"background-image"      => "",
+					"background-repeat"     => "repeat",
+					"background-position"   => "center center",
+					"background-size"       => "cover",
+					"background-attachment" => "scroll",
+				],
+				"output" => [
+					[
+						"element"  => ".breadcrumb_bg",
+					],
+				]
+			],
 		];
 
 		return $fields;
