@@ -1,6 +1,10 @@
 (function ($) {
     "use strict";
 
+    $('.navbar-toggler').click(function(){
+		$(this).toggleClass('open');
+	});
+
     $("#datepicker").datepicker();
 
 

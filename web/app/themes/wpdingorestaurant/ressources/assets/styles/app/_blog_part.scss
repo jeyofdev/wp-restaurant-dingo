@@ -92,6 +92,7 @@
     .single_blog_text {
         .date {
             margin-bottom: 20px;
+
             .date_item {
                 color: #2c3033;
                 font-size: 15px;
@@ -124,7 +125,7 @@
                 @media #{$small_mobile} {
                     font-size: 20px;
                 }
-    
+
                 @media #{$large_mobile} {
                     font-size: 20px;
                 }

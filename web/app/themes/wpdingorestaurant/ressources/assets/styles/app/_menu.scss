@@ -23,6 +23,13 @@
 }
 
 .main_menu {
+    @media (max-width: 992px) {
+        .container.full {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
     .navbar-brand {
         padding-top: 0;
         padding-bottom: 0;
@@ -135,7 +142,7 @@
         z-index: 9999 !important;
         position: absolute;
         left: 0;
-        top: 71px;
+        top: 85px;
         width: 100%;
         background-color: $white-color;
         text-align: center !important;
@@ -180,7 +187,7 @@
         z-index: 9999 !important;
         position: absolute;
         left: 0;
-        top: 71px;
+        top: 90px;
         width: 100%;
         background-color: $white-color;
         text-align: center !important;
@@ -229,7 +236,7 @@
         z-index: 9999 !important;
         position: absolute;
         left: 0;
-        top: 71px;
+        top: 90px;
         width: 100%;
         background-color: $white-color;
         text-align: center !important;
@@ -237,9 +244,17 @@
 
     .main_menu .main-menu-item {
         text-align: left !important;
+        height: calc(100vh - 90px);
+        padding-right: 0;
 
         .nav-item {
             padding: 3px 15px !important;
+            margin: 10px 0;
+            text-align: center;
+
+            .nav-link {
+                font-size: 20px;
+            }
         }
 
         .dropdown {
@@ -270,6 +285,87 @@
                     display: block;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .main_menu .main-menu-item {
+        height: calc(100vh - 90px);
+        width: calc(100% + 30px);
+        padding-right: 0;
+        margin-right: -15px;
+        margin-left: -15px;
+        align-items: center;
+
+        &.show {
+            display: flex;
+
+            .navbar-nav {
+                display: flex;
+            }
+        }
+
+        .navbar-nav {
+            display: none;
+        }
+    }
+
+    .main_menu .main-menu-item .nav-item .nav-link {
+        font-size: 20px;
+    }
+}
+
+
+
+/************** burger menu *****************/
+.navbar-toggler {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #8a8a8a;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 12px;
+        }
+
+        &:nth-child(3) {
+            top: 24px;
+        }
+    }
+
+    &.open {
+        span:nth-child(1) {
+            top: 12px;
+            transform: rotate(135deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+
+        span:nth-child(3) {
+            top: 13px;
+            transform: rotate(-135deg);
         }
     }
 }
