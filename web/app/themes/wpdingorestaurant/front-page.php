@@ -4,6 +4,7 @@
  * The front page template file
  */
 
+use Timber\PostQuery;
 use jeyofdev\wp\dingo\restaurant\extending\Timber;
 
 
@@ -46,7 +47,7 @@ $context["about_page"] = Timber::get_post([
     "post_type" => "page",
     "name" => "about"
 ]);
-$context["blog"] = Timber::get_posts([
+$context["blog"] = new PostQuery([
     "post_type" => "post",
     "post_per_page" => 3,
     "order_by" => "DESC"

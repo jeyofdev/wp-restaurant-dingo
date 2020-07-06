@@ -1,32 +1,34 @@
-<section class="blog_item_section blog_section section_padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-5">
-                <div class="section_title">
-                    <p>{{ post.blog_section_subtitle }}</p>
-                    <h2>{{ post.blog_section_title }}</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            {% for single_post in blog %}
-                <div class="col-sm-6 col-lg-4">
-                    <div class="single_blog_item">
-                        <div class="single_blog_img">
-                            <img src="{{ single_post.thumbnail.src|resize("home_thumbnail") }}" alt="">
-                        </div>
-                        <div class="single_blog_text">
-                            <div class="date">
-                                <a href="{{ get_day_link(single_post) }}" class="date_item">{{ single_post.date | date("M d, Y") }}</a>
-                                {{ category_by_post(single_post)| hashtag | raw }}
-                            </div>
-                            <h3><a href="{{ single_post.link }}">{{ single_post.title}}</a></h3>
-                            <a href="{{ single_post.link }}" class="btn_3">{{ __("Read More", "dingo") }} <img src="{{ theme.link ~ '/assets/images/icon/left_1.svg' }}" alt=""></a>
-                        </div>
+{% if blog.count is not same as (0) %}
+    <section class="blog_item_section blog_section section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="section_title">
+                        <p>{{ post.blog_section_subtitle }}</p>
+                        <h2>{{ post.blog_section_title }}</h2>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
+
+            <div class="row">
+                {% for single_post in blog %}
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="single_blog_item">
+                            <div class="single_blog_img">
+                                <img src="{{ single_post.thumbnail.src|resize("home_thumbnail") }}" alt="">
+                            </div>
+                            <div class="single_blog_text">
+                                <div class="date">
+                                    <a href="{{ get_day_link(single_post) }}" class="date_item">{{ single_post.date | date("M d, Y") }}</a>
+                                    {{ category_by_post(single_post)| hashtag | raw }}
+                                </div>
+                                <h3><a href="{{ single_post.link }}">{{ single_post.title}}</a></h3>
+                                <a href="{{ single_post.link }}" class="btn_3">{{ __("Read More", "dingo") }} <img src="{{ theme.link ~ '/assets/images/icon/left_1.svg' }}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+{% endif %}

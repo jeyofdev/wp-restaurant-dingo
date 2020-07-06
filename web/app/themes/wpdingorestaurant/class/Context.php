@@ -2,6 +2,7 @@
 
 namespace jeyofdev\wp\dingo\restaurant;
 
+use jeyofdev\wp\dingo\restaurant\extending\Page;
 use Timber\Menu;
 use jeyofdev\wp\dingo\restaurant\extending\Site;
 use jeyofdev\wp\dingo\restaurant\options\RestaurantSettings;
@@ -27,6 +28,7 @@ class Context {
             $this->context = $context;
 
             $this->add("site", new Site());
+            $this->add("page", new Page());
 
             $this->add("options", [
                 "date_format" => get_option("date_format"),
