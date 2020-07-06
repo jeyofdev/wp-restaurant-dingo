@@ -451,12 +451,34 @@ class FieldsCustomizer
 				]
 			],
 
+			// Add section video title option
+			[
+				"type"        => "text",
+				"settings"    => "video_title_setting",
+				"label"       => esc_html__("Video title", "dingo"),
+				"transport"   => "auto",
+				"section"     => "dingo_video_section",
+				"default"     => "Expect The Best"
+			],
+
+			// Add section video link option
+			[
+				"type"        => "text",
+				"settings"    => "video_link_setting",
+				"label"       => esc_html__("Video link", "dingo"),
+				"transport"   => "auto",
+				"section"     => "dingo_video_section",
+				"priority"    => 10,
+				"default"     => ""
+			],
+
 			// Add section video background image option
 			[
 				"type"        => "background",
 				"settings"    => "video_section_background_image_setting",
 				"transport"   => "auto",
 				"section"     => "dingo_video_section",
+				"priority"    => 30,
 				"default"     => [
 					"background-color"      => "rgba(20, 20, 20, 0)",
 					"background-image"      => "",

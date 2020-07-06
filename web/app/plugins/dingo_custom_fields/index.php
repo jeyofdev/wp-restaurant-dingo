@@ -225,31 +225,6 @@ register_extended_field_group([
 
 
 /**
- * Video section
- */
-register_extended_field_group([
-    "title" => __("Video section", "dingo"),
-    "fields" => [
-        Text::make(__("Title", "dingo"), "video_section_title")
-            ->required()
-            ->defaultValue(__("Expect The Best", "dingo")),
-        Url::make(__("Video", "dingo"), "video_url")
-            ->instructions(__("Add a youtubes presentation video", "dingo"))
-            ->required()
-    ],
-    "location" => [
-        Location::if("page_template", "==", "template/template-chefs.php")
-    ],
-    "position" => "normal",
-    "style" => "default",
-    "label_placement" => "left",
-    "instruction_placement" => "label",
-    "active" => true,
-]);
-
-
-
-/**
  * Home hero section
  */
 register_extended_field_group([
