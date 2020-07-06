@@ -91,6 +91,7 @@
 .blog_section {
     .single_blog_text {
         .date {
+            margin-bottom: 20px;
             .date_item {
                 color: #2c3033;
                 font-size: 15px;
@@ -103,6 +104,10 @@
                     color: $btn_bg;
                 }
             }
+        }
+
+        h3 {
+            margin-bottom: 0;
         }
 
         a {

@@ -140,40 +140,47 @@ class FieldsCustomizer
 				"panel" => "dingo_theme_option",
 				"priority" => 30
 			],
+
+			// Add home page backgroud color section 
+            "dingo_background_color_section" => [
+                "title" => esc_html__("Background color section", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 40
+			],
 			
 			// Add breadcrumb section
             "dingo_breadcrumb_section" => [
                 "title" => esc_html__("Breadcrumb", "dingo"),
 				"panel" => "dingo_theme_option",
-				"priority" => 40
+				"priority" => 50
 			],
 
 			// Add banner section 
             "dingo_banner_section" => [
                 "title" => esc_html__("Banner section", "dingo"),
 				"panel" => "dingo_theme_option",
-				"priority" => 50
+				"priority" => 60
 			],
 
 			// Add about section 
             "dingo_about_section" => [
                 "title" => esc_html__("About section", "dingo"),
 				"panel" => "dingo_theme_option",
-				"priority" => 60
+				"priority" => 70
 			],
 
 			// Add testimonial section 
             "dingo_testimonial_section" => [
                 "title" => esc_html__("Testimonial section", "dingo"),
 				"panel" => "dingo_theme_option",
-				"priority" => 70
+				"priority" => 80
 			],
 
 			// Add video section 
             "dingo_video_section" => [
                 "title" => esc_html__("Video section", "dingo"),
 				"panel" => "dingo_theme_option",
-				"priority" => 80
+				"priority" => 90
 			],
 		];
 
@@ -370,6 +377,139 @@ class FieldsCustomizer
 							".blog_right_sidebar .post_category_widget .cat-list li a"
 						],
 						"property" => "color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add footer color option
+			[
+				"type"        => "color",
+				"settings"    => "footer_color_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Footer background color :", "dingo"),
+				"section"     => "dingo_color_section",
+				"default"     => "#f9f8f3",
+				"output" => [
+					[
+						"element"  => [
+							"footer"
+						],
+						"property" => "background-color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add featured food menu background color option
+			[
+				"type"        => "color",
+				"settings"    => "background_color_section_featured_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Featured food menu section :", "dingo"),
+				"section"     => "dingo_background_color_section",
+				"default"     => "#fff",
+				"output" => [
+					[
+						"element"  => [
+							".home .exclusive_item_part"
+						],
+						"property" => "background-color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add about background color option
+			[
+				"type"        => "color",
+				"settings"    => "background_color_section_about_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("About section :", "dingo"),
+				"section"     => "dingo_background_color_section",
+				"default"     => "#fff",
+				"output" => [
+					[
+						"element"  => [
+							".home .about_bg"
+						],
+						"property" => "background-color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add about background color option
+			[
+				"type"        => "color",
+				"settings"    => "background_color_section_food_menu_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Food menu section :", "dingo"),
+				"section"     => "dingo_background_color_section",
+				"default"     => "#f6f5f1",
+				"output" => [
+					[
+						"element"  => [
+							".home .food_menu"
+						],
+						"property" => "background-color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add chiefs background color option
+			[
+				"type"        => "color",
+				"settings"    => "background_color_section_chiefs_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Chiefs section :", "dingo"),
+				"section"     => "dingo_background_color_section",
+				"default"     => "#fff",
+				"output" => [
+					[
+						"element"  => [
+							".home .chefs_part"
+						],
+						"property" => "background-color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add testimonial background color option
+			[
+				"type"        => "color",
+				"settings"    => "background_color_section_testimonial_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Testimonial section :", "dingo"),
+				"section"     => "dingo_background_color_section",
+				"default"     => "#f6f5f1",
+				"output" => [
+					[
+						"element"  => [
+							".home .review_part"
+						],
+						"property" => "background-color",
+						"suffix" => "!important"
+					],
+				]
+			],
+
+			// Add featured posts background color option
+			[
+				"type"        => "color",
+				"settings"    => "background_color_section_featured_posts_setting_hex",
+				"transport"   => "auto",
+				"label"       => esc_html__("Featured posts section :", "dingo"),
+				"section"     => "dingo_background_color_section",
+				"default"     => "#fff",
+				"output" => [
+					[
+						"element"  => [
+							".home .blog_section"
+						],
+						"property" => "background-color",
 						"suffix" => "!important"
 					],
 				]
