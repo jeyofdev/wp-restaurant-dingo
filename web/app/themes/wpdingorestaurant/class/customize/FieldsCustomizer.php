@@ -162,12 +162,19 @@ class FieldsCustomizer
 				"priority" => 60
 			],
 
+			// Add testimonial section 
+            "dingo_testimonial_section" => [
+                "title" => esc_html__("Testimonial section", "dingo"),
+				"panel" => "dingo_theme_option",
+				"priority" => 70
+			],
+
 			// Add video section 
             "dingo_video_section" => [
                 "title" => esc_html__("Video section", "dingo"),
 				"panel" => "dingo_theme_option",
-				"priority" => 70
-			]
+				"priority" => 80
+			],
 		];
 
 		return $sections;
@@ -182,6 +189,12 @@ class FieldsCustomizer
 	 */
     private function set_fields () : array
     {
+		$video_enable_active = [
+			"setting"  => "video_toggle_setting",
+			"operator" => "===",
+			"value"    => true,
+		];
+
 		$fields = [
 			// Add primary color option
 			[
@@ -451,6 +464,34 @@ class FieldsCustomizer
 				]
 			],
 
+			// enable section testimonial
+			[
+				"type"        => "switch",
+				"settings"    => "testimonial_toggle_setting",
+				"label"       => esc_html__("Display the testimonial section", "dingo"),
+				"transport"   => "auto",
+				"section"     => "dingo_testimonial_section",
+				"default"     => 0,
+				"choices"     => [
+					"on"  => esc_html__("Enable", "dingo"),
+					"off" => esc_html__("Disable", "dingo"),
+				],
+			],
+
+			// enable section video
+			[
+				"type"        => "switch",
+				"settings"    => "video_toggle_setting",
+				"label"       => esc_html__("Display the video section", "dingo"),
+				"transport"   => "auto",
+				"section"     => "dingo_video_section",
+				"default"     => 0,
+				"choices"     => [
+					"on"  => esc_html__("Enable", "dingo"),
+					"off" => esc_html__("Disable", "dingo"),
+				],
+			],
+
 			// Add section video title option
 			[
 				"type"        => "text",
@@ -458,6 +499,7 @@ class FieldsCustomizer
 				"label"       => esc_html__("Video title", "dingo"),
 				"transport"   => "auto",
 				"section"     => "dingo_video_section",
+				"active_callback"    => [$video_enable_active],
 				"default"     => "Expect The Best"
 			],
 
@@ -468,6 +510,7 @@ class FieldsCustomizer
 				"label"       => esc_html__("Video link", "dingo"),
 				"transport"   => "auto",
 				"section"     => "dingo_video_section",
+				"active_callback"    => [$video_enable_active],
 				"priority"    => 10,
 				"default"     => ""
 			],
@@ -478,6 +521,7 @@ class FieldsCustomizer
 				"settings"    => "video_section_background_image_setting",
 				"transport"   => "auto",
 				"section"     => "dingo_video_section",
+				"active_callback"    => [$video_enable_active],
 				"priority"    => 30,
 				"default"     => [
 					"background-color"      => "rgba(20, 20, 20, 0)",
@@ -492,7 +536,7 @@ class FieldsCustomizer
 						"element"  => ".intro_video_bg",
 					],
 				]
-			],
+			]
 		];
 
 		return $fields;

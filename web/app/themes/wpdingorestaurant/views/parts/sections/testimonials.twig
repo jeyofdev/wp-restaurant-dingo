@@ -1,33 +1,35 @@
-{% if testimonials|length > 0 %}
-    <section class="review_part gray_bg section_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5">
-                    <div class="section_title">
-                        <p>{{ post.testimonial_section_subtitle }}</p>
-                        <h2>{{ post.testimonial_section_title }}</h2>
+{% if theme.theme_mod('testimonial_toggle_setting', true) is same as (true) %}
+    {% if testimonials|length > 0 %}
+        <section class="review_part gray_bg section_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="section_title">
+                            <p>{{ post.testimonial_section_subtitle }}</p>
+                            <h2>{{ post.testimonial_section_title }}</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-lg-11">
-                    <div class="client_review_part owl-carousel">
-                        {% for testimonial in testimonials %}
-                            <div class="client_review_single media">
-                                <div class="client_img align-self-center">
-                                    <img src="{{ testimonial.thumbnail.src|resize('testimonial_avatar') }}" alt="">
+                <div class="row">
+                    <div class="col-lg-11">
+                        <div class="client_review_part owl-carousel">
+                            {% for testimonial in testimonials %}
+                                <div class="client_review_single media">
+                                    <div class="client_img align-self-center">
+                                        <img src="{{ testimonial.thumbnail.src|resize('testimonial_avatar') }}" alt="">
+                                    </div>
+                                    <div class="client_review_text media-body">
+                                        <p>{{ testimonial.content|raw }}</p>
+                                        <h4>{{ testimonial.writer }}, <span>{{ testimonial.job }}</span>
+                                        </h4>
+                                    </div>
                                 </div>
-                                <div class="client_review_text media-body">
-                                    <p>{{ testimonial.content|raw }}</p>
-                                    <h4>{{ testimonial.writer }}, <span>{{ testimonial.job }}</span>
-                                    </h4>
-                                </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% endif %}
 {% endif %}
