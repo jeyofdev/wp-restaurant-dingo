@@ -53,7 +53,7 @@ class RecentPostsWidget extends WP_Widget {
         }
 
         // title
-        $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("Recent Post", "dingo");
+        $instance["title"] = !empty($instance["title"]) ? apply_filters("widget_title", $instance["title"], $instance, $this->id_base) : __("Recent Posts", "dingo");
         
         // get number of posts to display
         $instance["count"] = (!empty($instance["count"])) ? absint($instance["count"]) : 4;

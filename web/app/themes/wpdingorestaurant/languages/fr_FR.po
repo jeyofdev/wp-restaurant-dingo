@@ -1,0 +1,768 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dingoRestaurant\n"
+"POT-Creation-Date: 2020-07-11 12:36+0200\n"
+"PO-Revision-Date: 2020-07-11 12:40+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_x;_n;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class/extending/Post.php:47
+#, php-format
+msgid "%s Month ago"
+msgstr "Il y a %s mois"
+
+#: class/extending/Post.php:47
+#, php-format
+msgid "%s Months ago"
+msgstr "Il y a %s mois"
+
+#: class/extending/Post.php:48
+#, php-format
+msgid "%s Day ago"
+msgstr "Il y a %s jour"
+
+#: class/extending/Post.php:48
+#, php-format
+msgid "%s Days ago"
+msgstr "Il y a %s jours"
+
+#: class/extending/Post.php:49
+#, php-format
+msgid "%s Hour ago"
+msgstr "Il y a %s heure"
+
+#: class/extending/Post.php:49
+#, php-format
+msgid "%s Hours ago"
+msgstr "Il y a %s heures"
+
+#: class/extending/Post.php:50
+#, php-format
+msgid "%s Minute ago"
+msgstr "Il y a %s minute"
+
+#: class/extending/Post.php:50
+#, php-format
+msgid "%s Minutes ago"
+msgstr "Il y a %s minutes"
+
+#: class/extending/Post.php:51
+#, php-format
+msgid "%s Second ago"
+msgstr "Il y a %s seconde"
+
+#: class/extending/Post.php:51
+#, php-format
+msgid "%s Seconds ago"
+msgstr "Il y a %s secondes"
+
+#: class/extending/twig/Functions.php:97
+#, php-format
+msgid "%d Comment"
+msgstr "%d Commentaire"
+
+#: class/extending/twig/Functions.php:97
+#, php-format
+msgid "%d Comments"
+msgstr "%d Commentaires"
+
+#: class/inc/Admin.php:33 class/inc/Admin.php:94
+msgid "Thumbnail"
+msgstr "Miniature"
+
+#: class/inc/Admin.php:59
+msgid "Author"
+msgstr "Auteur"
+
+#: class/inc/Admin.php:96 class/inc/Taxonomies.php:35
+msgid "Types"
+msgstr "Types"
+
+#: class/inc/Comments.php:21
+msgid "Name *"
+msgstr "Nom *"
+
+#: class/inc/Comments.php:22
+msgid "Email *"
+msgstr "Email *"
+
+#: class/inc/Comments.php:23
+msgid "Website"
+msgstr "Site web"
+
+#: class/inc/Comments.php:66
+msgid "Write Comment *"
+msgstr "Votre commentaire"
+
+#: class/inc/Comments.php:73
+msgid "Leave a Reply"
+msgstr "Laisser un commentaire"
+
+#: class/inc/Comments.php:83
+msgid "Send Message"
+msgstr "Ajouter un commentaire"
+
+#: class/inc/Menus.php:20
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+#: class/inc/Pagination.php:47
+msgid "Prev Post"
+msgstr "Article précédent"
+
+#: class/inc/Pagination.php:74
+msgid "Next Post"
+msgstr "Article suivant"
+
+#: class/inc/PostTypes.php:34 class/inc/PostTypes.php:36
+msgid "Chefs"
+msgstr "Chefs"
+
+#: class/inc/PostTypes.php:37
+msgid "Chef"
+msgstr "Chef"
+
+#: class/inc/PostTypes.php:38
+msgid "Edit chef"
+msgstr "Modifier un chef"
+
+#: class/inc/PostTypes.php:39
+msgid "New chef"
+msgstr "Nouveau chef"
+
+#: class/inc/PostTypes.php:40
+msgid "View chef"
+msgstr "Voir le chef"
+
+#: class/inc/PostTypes.php:41
+msgid "View chefs"
+msgstr "Voir les chefs"
+
+#: class/inc/PostTypes.php:42
+msgid "Search chefs"
+msgstr "Rechercher des chefs"
+
+#: class/inc/PostTypes.php:43
+msgid "No chefs found."
+msgstr "Aucun chef trouvé."
+
+#: class/inc/PostTypes.php:44
+msgid "No chefs found in trash."
+msgstr "Aucun chef trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:45
+msgid "All chefs"
+msgstr "Tous les chefs"
+
+#: class/inc/PostTypes.php:59 class/inc/PostTypes.php:61
+msgid "Testimonials"
+msgstr "Témoignages"
+
+#: class/inc/PostTypes.php:62
+msgid "Testimonial"
+msgstr "Témoignage"
+
+#: class/inc/PostTypes.php:63
+msgid "Edit testimonial"
+msgstr "Modifier un témoignage"
+
+#: class/inc/PostTypes.php:64
+msgid "New testimonial"
+msgstr "Nouveau témoignage"
+
+#: class/inc/PostTypes.php:65
+msgid "View testimonial"
+msgstr "Voir le témoignage"
+
+#: class/inc/PostTypes.php:66
+msgid "View testimonials"
+msgstr "Voir les témoignages"
+
+#: class/inc/PostTypes.php:67
+msgid "Search testimonials"
+msgstr "Rechercher des témoignages"
+
+#: class/inc/PostTypes.php:68
+msgid "No testimonials found."
+msgstr "Aucun témoignage trouvé."
+
+#: class/inc/PostTypes.php:69
+msgid "No testimonials found in trash."
+msgstr "Aucun témoignage trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:70
+msgid "All testimonials"
+msgstr "Tous les témoignages"
+
+#: class/inc/PostTypes.php:84 class/inc/PostTypes.php:86
+msgid "Food Menus"
+msgstr "Menus"
+
+#: class/inc/PostTypes.php:87
+msgid "Food Menu"
+msgstr "Menu"
+
+#: class/inc/PostTypes.php:88
+msgid "Edit food menu"
+msgstr "Modifier un menu"
+
+#: class/inc/PostTypes.php:89
+msgid "New food menu"
+msgstr "Nouveau menu"
+
+#: class/inc/PostTypes.php:90
+msgid "View food menu"
+msgstr "Afficher un menu"
+
+#: class/inc/PostTypes.php:91
+msgid "View food menus"
+msgstr "Voir les menus"
+
+#: class/inc/PostTypes.php:92
+msgid "Search food menus"
+msgstr "Recherche des menus"
+
+#: class/inc/PostTypes.php:93
+msgid "No food menus found."
+msgstr "Aucun menu trouvé."
+
+#: class/inc/PostTypes.php:94
+msgid "No food menus found in trash."
+msgstr "Aucun menu trouvé dans la corbeille."
+
+#: class/inc/PostTypes.php:95
+msgid "All food menus"
+msgstr "Tous les menus"
+
+#: class/inc/Sidebar.php:77
+msgid "Blog sidebar"
+msgstr "Barre latéral du blog"
+
+#: class/inc/Sidebar.php:86
+msgid "Footer sidebar"
+msgstr "Barre latérale du footer"
+
+#: class/inc/Taxonomies.php:36
+msgid "Type"
+msgstr "Type"
+
+#: class/inc/Taxonomies.php:37
+msgid "Search Types"
+msgstr "Rechercher des types"
+
+#: class/inc/Taxonomies.php:38
+msgid "Popular Types"
+msgstr "Types populaires"
+
+#: class/inc/Taxonomies.php:39
+msgid "All Types"
+msgstr "Tous les types"
+
+#: class/inc/Taxonomies.php:40
+msgid "Edit Type"
+msgstr "Modifier un type"
+
+#: class/inc/Taxonomies.php:41
+msgid "View Type"
+msgstr "Voir un type"
+
+#: class/inc/Taxonomies.php:42
+msgid "Update Type"
+msgstr "Mettre à jour un type"
+
+#: class/inc/Taxonomies.php:43
+msgid "Add New Type"
+msgstr "Ajouter un nouveau type"
+
+#: class/inc/Taxonomies.php:44
+msgid "No Types found."
+msgstr "Aucun types trouvée."
+
+#: class/inc/Taxonomies.php:45
+msgid "No Types"
+msgstr "Aucun types"
+
+#: class/inc/Taxonomies.php:46
+msgid "&larr; Back to Types"
+msgstr "&larr; Revenir aux types"
+
+#: class/options/RestaurantSettings.php:50
+msgid "Phone"
+msgstr "Téléphone"
+
+#: class/options/RestaurantSettings.php:53
+msgid "Restaurant phone number (ex: 01 12 34 56 78)."
+msgstr "Numéro de téléphone du restaurant (ex: 01 12 34 56 78)."
+
+#: class/options/RestaurantSettings.php:57
+msgid "Address"
+msgstr "Adresse"
+
+#: class/options/RestaurantSettings.php:60
+msgid "Restaurant address (ex: 16 Creek Ave. Farming, NY)."
+msgstr "Adresse du restaurant (ex: 16 Creek Ave. Farming, NY)."
+
+#: class/options/RestaurantSettings.php:64
+msgid "Email"
+msgstr "Email"
+
+#: class/options/RestaurantSettings.php:67
+msgid ""
+"Restaurant email (ex: monsite@contact.com). By default the email address is "
+"that indicated Settings/General."
+msgstr ""
+"Email du restaurant (ex: monsite@contact.com). Par défaut, l’adresse e-mail "
+"est celle indiquée dans Réglages / Général."
+
+#: class/options/RestaurantSettings.php:71
+msgid "Facebook"
+msgstr "Facebook"
+
+#: class/options/RestaurantSettings.php:74
+msgid "Facebook username (ex: john-doe)."
+msgstr "Nom d’utilisateur Facebook (ex: john-doe)."
+
+#: class/options/RestaurantSettings.php:78
+msgid "Twitter"
+msgstr "Twitter"
+
+#: class/options/RestaurantSettings.php:81
+msgid "Twitter username (ex: john-doe)."
+msgstr "Nom d’utilisateur Twitter (ex: john-doe)."
+
+#: class/options/RestaurantSettings.php:85
+msgid "Instagram"
+msgstr "Instagram"
+
+#: class/options/RestaurantSettings.php:88
+msgid "Instagram username (ex: john-doe)."
+msgstr "Nom d’utilisateur Instagram (ex: john-doe)."
+
+#: class/options/RestaurantSettings.php:92
+#: class/widgets/OpeningHoursWidget.php:27
+#: class/widgets/OpeningHoursWidget.php:54
+msgid "Opening hours"
+msgstr "Horaires d’ouvertures"
+
+#: class/options/RestaurantSettings.php:95
+msgid ""
+"Opening hours (ex: Monday : 8H - 19h\n"
+"\rTuesday : 8H - 19h\n"
+"\r...)."
+msgstr ""
+"Horaires d’ouverture (ex: lundi: 8H - 19h\n"
+"\n"
+"Mardi : 8H - 19h\n"
+"\n"
+"…)."
+
+#: class/options/RestaurantSettings.php:110
+#: class/options/RestaurantSettings.php:129
+msgid "Restaurant Settings"
+msgstr "Informations sur le restaurant"
+
+#: class/options/RestaurantSettings.php:111
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#: class/widgets/ContactWidget.php:27
+msgid "Contact"
+msgstr "Contact"
+
+#: class/widgets/ContactWidget.php:29
+msgid "Displays the contact informations."
+msgstr "Affiche les informations de contact."
+
+#: class/widgets/ContactWidget.php:34 class/widgets/OpeningHoursWidget.php:34
+#: class/widgets/PostCategoryWidget.php:33
+#: class/widgets/RecentPostsWidget.php:34 class/widgets/SearchWidget.php:35
+#: class/widgets/TagCloudWidget.php:33
+msgid "Title"
+msgstr "Titre"
+
+#: class/widgets/ContactWidget.php:53
+msgid "Contact us"
+msgstr "Nous contacter"
+
+#: class/widgets/OpeningHoursWidget.php:29
+msgid "Displays the restaurant opening hours."
+msgstr "Affiche les heures d’ouverture du restaurant."
+
+#: class/widgets/OpeningHoursWidget.php:58
+msgid "Monday"
+msgstr "Lundi"
+
+#: class/widgets/OpeningHoursWidget.php:59
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: class/widgets/OpeningHoursWidget.php:60
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: class/widgets/OpeningHoursWidget.php:61
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: class/widgets/OpeningHoursWidget.php:62
+msgid "Friday"
+msgstr "Vendredi"
+
+#: class/widgets/OpeningHoursWidget.php:63
+msgid "Saturday"
+msgstr "Samedi"
+
+#: class/widgets/OpeningHoursWidget.php:64
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: class/widgets/PostCategoryWidget.php:26
+#: class/widgets/PostCategoryWidget.php:54
+msgid "Categories"
+msgstr "Categories"
+
+#: class/widgets/PostCategoryWidget.php:28
+msgid "A list of categories."
+msgstr "La liste des catégories."
+
+#: class/widgets/PostCategoryWidget.php:34
+msgid "Show post counts ?"
+msgstr "Afficher le nombre de messages ?"
+
+#: class/widgets/PostCategoryWidget.php:35
+msgid "Show hierarchy ?"
+msgstr "Afficher la hiérarchie?"
+
+#: class/widgets/RecentPostsWidget.php:27
+#: class/widgets/RecentPostsWidget.php:56
+msgid "Recent Posts"
+msgstr "Derniers articles"
+
+#: class/widgets/RecentPostsWidget.php:29
+msgid "Your site’s most recent Posts with thumbnail."
+msgstr "Articles les plus récents de votre site avec vignette."
+
+#: class/widgets/RecentPostsWidget.php:35
+msgid "Number of posts to show :"
+msgstr "Nombre d’articles à afficher :"
+
+#: class/widgets/RecentPostsWidget.php:36
+msgid "Show post date ?"
+msgstr "Afficher la date des articles ?"
+
+#: class/widgets/SearchWidget.php:28
+msgid "Search"
+msgstr "Recherche"
+
+#: class/widgets/SearchWidget.php:30
+msgid "A search form for your site."
+msgstr "Un formulaire de recherche pour votre site."
+
+#: class/widgets/TagCloudWidget.php:26
+msgid "Tag Cloud"
+msgstr "Nuage de mots-clé"
+
+#: class/widgets/TagCloudWidget.php:28
+msgid "A cloud of your most used tag or category."
+msgstr "A cloud of your most used tag or category."
+
+#: class/widgets/TagCloudWidget.php:34
+msgid "Show tag counts ?"
+msgstr "Afficher le nombre d’articles par mot clé ?"
+
+#: class/widgets/TagCloudWidget.php:35
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#: class/widgets/TagCloudWidget.php:61
+msgid "Category"
+msgstr "Catégorie"
+
+#: class/widgets/TagCloudWidget.php:63
+msgid "Tags"
+msgstr "Tags"
+
+#: class/widgets/TagCloudWidget.php:65
+msgid "Tag Clouds"
+msgstr "Nuage de mots-clé"
+
+#: class/widgets/TagCloudWidget.php:136
+msgid ""
+"The tag cloud will not be displayed since there are no taxonomies that "
+"support the tag cloud widget."
+msgstr ""
+"Le nuage de mots clé ne sera pas affiché car aucune taxonomie ne prend en "
+"charge le widget de nuage de tags."
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:161
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:203
+#: ressources/node_modules/yargs/lib/usage.js:158
+msgid "Commands:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:169
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:225
+#: ressources/node_modules/yargs/lib/usage.js:166
+msgid "aliases:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:228
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:288
+#: ressources/node_modules/yargs/lib/usage.js:225
+msgid "boolean"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:229
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:289
+#: ressources/node_modules/yargs/lib/usage.js:226
+msgid "count"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:230
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:231
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:290
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:291
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+#: ressources/node_modules/yargs/lib/usage.js:227
+#: ressources/node_modules/yargs/lib/usage.js:228
+msgid "string"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:232
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:292
+#: ressources/node_modules/yargs/lib/usage.js:229
+msgid "array"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:233
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:293
+#: ressources/node_modules/yargs/lib/usage.js:230
+msgid "number"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:237
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:297
+#: ressources/node_modules/yargs/lib/usage.js:234
+msgid "required"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:238
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:298
+#: ressources/node_modules/yargs/lib/usage.js:235
+msgid "choices:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:257
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:317
+#: ressources/node_modules/yargs/lib/usage.js:254
+msgid "Examples:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:358
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:436
+#: ressources/node_modules/yargs/lib/usage.js:354
+msgid "generated-value"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:380
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:223
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:458
+#: ressources/node_modules/yargs/lib/usage.js:376
+msgid "default:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:26
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:49
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:29
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:52
+#: ressources/node_modules/yargs/lib/validation.js:22
+#: ressources/node_modules/yargs/lib/validation.js:37
+#, javascript-format
+msgid "Not enough non-option arguments: got %s, need at least %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:37
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:40
+#: ressources/node_modules/yargs/lib/validation.js:26
+#, javascript-format
+msgid "Too many non-option arguments: got %s, maximum of %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:183
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:147
+#: ressources/node_modules/yargs/lib/validation.js:171
+msgid "Invalid values:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:186
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:150
+#: ressources/node_modules/yargs/lib/validation.js:174
+#, javascript-format
+msgid "Argument: %s, Given: %s, Choices: %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:212
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:180
+#: ressources/node_modules/yargs/lib/validation.js:200
+#, javascript-format
+msgid "Argument check failed: %s"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:276
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:256
+#: ressources/node_modules/yargs/lib/validation.js:270
+msgid "Implications failed:"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:305
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:295
+#, javascript-format
+msgid "Arguments %s and %s are mutually exclusive"
+msgstr ""
+
+#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:324
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:316
+#: ressources/node_modules/yargs/lib/validation.js:294
+#, javascript-format
+msgid "Did you mean %s?"
+msgstr ""
+
+#: ressources/node_modules/sass-graph/node_modules/yargs-parser/index.js:367
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:382
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:392
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:446
+#: ressources/node_modules/yargs-parser/index.js:301
+#, javascript-format
+msgid "Not enough arguments following: %s"
+msgstr ""
+
+#: ressources/node_modules/sass-graph/node_modules/yargs-parser/index.js:541
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:591
+#: ressources/node_modules/yargs-parser/index.js:449
+#, javascript-format
+msgid "Invalid JSON config file: %s"
+msgstr ""
+
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:92
+msgid "Positionals:"
+msgstr ""
+
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:192
+#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:194
+msgid "command"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:372
+#, javascript-format
+msgid "Argument unexpected for: %s"
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:941
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.array."
+msgstr ""
+
+#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:944
+#, javascript-format
+msgid "Invalid configuration: %s, opts.count excludes opts.narg."
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "big_int"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "num"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "template_head"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "comment2"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "regexp"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "operator"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "eof"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "expand"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "punc"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "arrow"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "name"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "atom"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "keyword"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "("
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ")"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ":"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ";"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid ","
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "]"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "}"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "{"
+msgstr ""
+
+#: ressources/node_modules/terser/dist/bundle.min.js:1
+msgid "["
+msgstr ""
+
+#~ msgid "Recent Post"
+#~ msgstr "Dernier article"

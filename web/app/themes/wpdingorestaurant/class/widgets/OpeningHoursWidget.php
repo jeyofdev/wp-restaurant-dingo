@@ -26,7 +26,7 @@ class OpeningHoursWidget extends WP_Widget {
     {
         parent::__construct("dingo_opening_hours_widget", __("Opening hours", "dingo"), [
             "classname" => "Opening hours_widget",
-			"description" => __("displays the restaurant opening hours.", "dingo"),
+			"description" => __("Displays the restaurant opening hours.", "dingo"),
 			"customize_selective_refresh" => true,
         ]);
 

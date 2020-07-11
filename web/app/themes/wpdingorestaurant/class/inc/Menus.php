@@ -17,7 +17,7 @@ class Menus {
     public static function init () : void
     {
         add_action("init", function () {
-            register_nav_menu("primary", __("main navigation", "dingo"));
+            register_nav_menu("primary", __("Main navigation", "dingo"));
         });
     }
 }

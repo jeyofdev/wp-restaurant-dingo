@@ -63,7 +63,7 @@ class Comments {
     {
         add_filter("comment_form_defaults", function (array $fields)
         {
-            $commentLabel = _x("Write Comment *", "noun");
+            $commentLabel = __("Write Comment *", "dingo");
 
             $user = wp_get_current_user();
             $user_identity = $user->exists() ? $user->display_name : '';

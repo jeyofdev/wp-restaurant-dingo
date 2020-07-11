@@ -21,6 +21,8 @@ class Supports {
             add_theme_support("html5");
             add_theme_support("menus");
             add_theme_support("post-thumbnails", ["post", "food_menu", "chef", "testimonial"]);
+
+            load_theme_textdomain("dingo", get_template_directory() . "/languages/");
         });
     }
 }

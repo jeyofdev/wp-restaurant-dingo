@@ -44,11 +44,11 @@ class Post extends TimberPost
         DateHelpers::$interval = DateHelpers::set_interval($this->post_datetime);
 
         $args = [
-            "m" => sprintf( _n("%s Month ago", "%s Months ago", (int)DateHelpers::$interval->m, "dingo"), (int)DateHelpers::$interval->m),
-            "d" => sprintf( _n("%s Day ago", "%s Days ago", (int)DateHelpers::$interval->d, "dingo"), (int)DateHelpers::$interval->d),
-            "h" => sprintf( _n("%s Hour ago", "%s Hours ago", (int)DateHelpers::$interval->h, "dingo"), (int)DateHelpers::$interval->h),
-            "i" => sprintf( _n("%s Minute ago", "%s Minutes ago", (int)DateHelpers::$interval->i, "dingo"), (int)DateHelpers::$interval->i),
-            "s" => sprintf( _n("%s Seconde ago", "%s Secondes ago", (int)DateHelpers::$interval->s, "dingo"), (int)DateHelpers::$interval->s)
+            "m" => sprintf( _n(__("%s Month ago", "dingo"), __("%s Months ago", "dingo"), (int)DateHelpers::$interval->m, "dingo"), (int)DateHelpers::$interval->m),
+            "d" => sprintf( _n(__("%s Day ago", "dingo"), __("%s Days ago", "dingo"), (int)DateHelpers::$interval->d, "dingo"), (int)DateHelpers::$interval->d),
+            "h" => sprintf( _n(__("%s Hour ago", "dingo"), __("%s Hours ago", "dingo"), (int)DateHelpers::$interval->h, "dingo"), (int)DateHelpers::$interval->h),
+            "i" => sprintf( _n(__("%s Minute ago", "dingo"), __("%s Minutes ago", "dingo"), (int)DateHelpers::$interval->i, "dingo"), (int)DateHelpers::$interval->i),
+            "s" => sprintf( _n(__("%s Second ago", "dingo"), __("%s Seconds ago", "dingo"), (int)DateHelpers::$interval->s, "dingo"), (int)DateHelpers::$interval->s)
         ];
 
         if (DateHelpers::$interval->y >= 1) {
