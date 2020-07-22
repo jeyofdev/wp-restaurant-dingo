@@ -155,7 +155,7 @@ class Functions
     public static function get_day_link (Environment $twig) : void
     {
         $twig->addFunction(new TwigFunction("get_day_link", function (Post $post) {
-            $post_date = new DateTime($post->date);
+            $post_date = new DateTime($post->date("Y-m-d"));
 
             $archive_year  = get_the_time($post_date->format("Y"), $post); 
             $archive_month = get_the_time($post_date->format("m"), $post); 

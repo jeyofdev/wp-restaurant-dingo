@@ -1,6 +1,6 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    {% include "parts/breadcrumb.twig" with { "title": single_cat_title(page.home_title ~ " : ", false) } %}
+    {% include "parts/breadcrumb.twig" with { "title": single_term_title(page.home_title ~ " : ", false) } %}
     {% include "parts/posts/list-posts.twig" with {"no_posts": __("No posts for the moment", "dingo") } %}
 {% endblock body %}

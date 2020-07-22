@@ -19,7 +19,8 @@
                             </div>
                             <div class="single_blog_text">
                                 <div class="date">
-                                    <a href="{{ get_day_link(single_post) }}" class="date_item">{{ single_post.date | date("M d, Y") }}</a>
+                                    <a href="{{ get_day_link(single_post) }}" class="date_item">{{ single_post.date(get_option("date_format")) }}</a>
+
                                     {{ category_by_post(single_post)| hashtag | raw }}
                                 </div>
                                 <h3><a href="{{ single_post.link }}">{{ single_post.title}}</a></h3>

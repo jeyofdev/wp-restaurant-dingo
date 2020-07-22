@@ -39,8 +39,10 @@ class Twig extends TimberTwig
     public function add_timber_functions($twig) {
         $twig->addFunction(new Twig_Function("previous_post_link", "previous_post_link"));
         $twig->addFunction(new Twig_Function("next_post_link", "next_post_link"));
-        $twig->addFunction(new Twig_Function("single_cat_title", "single_cat_title"));
+        $twig->addFunction(new Twig_Function("single_term_title", "single_term_title"));
         $twig->addFunction(new Twig_Function("get_avatar", "get_avatar"));
+        $twig->addFunction(new Twig_Function("get_option", "get_option"));
+        $twig->addFunction(new Twig_Function("is_date", "is_date"));
 
         Functions::dump($twig);
         Functions::dd($twig);
