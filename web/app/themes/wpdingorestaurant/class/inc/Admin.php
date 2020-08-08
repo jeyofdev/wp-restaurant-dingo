@@ -66,7 +66,8 @@ class Admin {
                 $post = Timber::get_post([
                     "post_type" => "testimonial",
                     "posts_per_page" => 1,
-                    "post__in" => [$postId]
+                    "post__in" => [$postId],
+                    "post_status" => ["publish", "trash", "draft"]
                 ]);
 
                 echo $post->testimonial_author;
@@ -105,7 +106,8 @@ class Admin {
                 $post = Timber::get_post([
                     "post_type" => "food_menu",
                     "posts_per_page" => 1,
-                    "post__in" => [$postId]
+                    "post__in" => [$postId],
+                    "post_status" => ["publish", "trash", "draft"]
                 ]);
 
                 $terms = [];
