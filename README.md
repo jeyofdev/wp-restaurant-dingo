@@ -28,7 +28,7 @@ For this theme, I use the [Dingo](https://colorlib.com/wp/template/dingo/) templ
 
 ## Install all the dependencies :
 ```sh
-$ cd web/app/themes/estateagency/ressources
+$ cd web/app/themes/wpdingorestaurant/
 $ yarn install
 $ composer install
 ```
@@ -37,23 +37,19 @@ $ composer install
 
 ## Generate the assets for static files
 
-Set the proxyTarget property in web/app/themes/estateagency/ressources/compiler/config.js:
-```js
-module.exports = {
-    ...
-    proxyTarget: 'http://localhost:8000/',
-    ...
-}
-```
-
 Go to resources folder
 ```sh
-$ cd web/app/themes/wpdingorestaurant/ressources
+$ cd web/app/themes/wpdingorestaurant/
 ```
 
 Production mode :
 ```sh
 $ yarn run build
+```
+
+Production mode with the assets minified :
+```sh
+$ yarn build:production
 ```
 
 Dev mode :
