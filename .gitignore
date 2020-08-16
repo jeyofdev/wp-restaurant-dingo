@@ -23,8 +23,7 @@ web/app/themes/wpdingorestaurant/ressources/yarn.*
 
 # Dependencies
 /vendor
-/node_modules/
-/web/app/themes/wpdingorestaurant/ressources/node_modules
+/**/node_modules/
 
 # WP-CLI
 wp-cli.local.yml

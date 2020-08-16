@@ -1,4 +1,24 @@
 {
+  "name": "wp-restaurant-dingo",
+  "version": "1.0.0",
+  "description": "Create a theme wordpress having as subject a restaurant",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeyofdev/wp-restaurant-dingo.git"
+  },
+  "keywords": [
+    "webpack",
+    "wordpress",
+    "php",
+    "timber"
+  ],
+  "author": "jeyofdev <jgregoire.pro@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeyofdev/wp-restaurant-dingo/issues"
+  },
+  "homepage": "https://github.com/jeyofdev/wp-restaurant-dingo#readme",
   "dependencies": {
     "maildev": "^1.1.0"
   }

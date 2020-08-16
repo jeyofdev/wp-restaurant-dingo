@@ -1,2 +1,33 @@
-.wrap .wp-list-table.widefat.posts #the-list tr *{vertical-align:middle}.post-type-chef .manage-column.column-thumbnail,.post-type-food_menu .manage-column.column-thumbnail{width:9.5%}.post-type-testimonial .manage-column.column-testimonial_author{width:15%}.post-type-food_menu .manage-column.column-types{width:15%}
+/* line 1, stdin */
 
+.wrap .wp-list-table.widefat.posts #the-list tr * {
+  vertical-align: middle;
+}
+
+/* =================== columns post type chef ==================== */
+
+/* line 11, stdin */
+
+.post-type-chef .manage-column.column-thumbnail,
+.post-type-food_menu .manage-column.column-thumbnail {
+  width: 9.5%;
+}
+
+/* =================== columns post type testimonial ==================== */
+
+/* line 23, stdin */
+
+.post-type-testimonial .manage-column.column-testimonial_author {
+  width: 15%;
+}
+
+/* =================== columns post type food menu ==================== */
+
+/* line 35, stdin */
+
+.post-type-food_menu .manage-column.column-types {
+  width: 15%;
+}
+
+
+/*# sourceMappingURL=admin.css.map*/

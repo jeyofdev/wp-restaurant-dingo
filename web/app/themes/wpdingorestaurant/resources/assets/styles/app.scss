@@ -1,0 +1,19 @@
+// variable overrides
+$owl-image-path: "~owl.carousel/src/img/" !default;
+
+
+
+// lib
+@import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.min.css";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~magnific-popup/src/css/main";
+@import "~@fortawesome/fontawesome-free/css/all";
+@import "lib/themify-icons.css";
+@import "~jquery-nice-select/scss/nice-select";
+@import "~gijgo/css/gijgo.min.css";
+
+
+
+// app
+@import "app/styles";
