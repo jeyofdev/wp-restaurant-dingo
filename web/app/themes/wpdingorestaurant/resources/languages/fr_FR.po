@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dingoRestaurant\n"
-"POT-Creation-Date: 2020-07-11 12:36+0200\n"
-"PO-Revision-Date: 2020-07-11 12:40+0200\n"
+"POT-Creation-Date: 2020-08-16 10:50+0200\n"
+"PO-Revision-Date: 2020-08-16 10:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: __;_x;_n;_e\n"
@@ -75,7 +75,7 @@ msgstr "%d Commentaire"
 msgid "%d Comments"
 msgstr "%d Commentaires"
 
-#: class/inc/Admin.php:33 class/inc/Admin.php:94
+#: class/inc/Admin.php:33 class/inc/Admin.php:95
 msgid "Thumbnail"
 msgstr "Miniature"
 
@@ -83,7 +83,7 @@ msgstr "Miniature"
 msgid "Author"
 msgstr "Auteur"
 
-#: class/inc/Admin.php:96 class/inc/Taxonomies.php:35
+#: class/inc/Admin.php:97 class/inc/Taxonomies.php:35
 msgid "Types"
 msgstr "Types"
 
@@ -110,6 +110,10 @@ msgstr "Laisser un commentaire"
 #: class/inc/Comments.php:83
 msgid "Send Message"
 msgstr "Ajouter un commentaire"
+
+#: class/inc/Comments.php:107
+msgid "Reply"
+msgstr "Répondre"
 
 #: class/inc/Menus.php:20
 msgid "Main navigation"
@@ -502,267 +506,6 @@ msgid ""
 msgstr ""
 "Le nuage de mots clé ne sera pas affiché car aucune taxonomie ne prend en "
 "charge le widget de nuage de tags."
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:161
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:203
-#: ressources/node_modules/yargs/lib/usage.js:158
-msgid "Commands:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:169
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:225
-#: ressources/node_modules/yargs/lib/usage.js:166
-msgid "aliases:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:228
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:288
-#: ressources/node_modules/yargs/lib/usage.js:225
-msgid "boolean"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:229
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:289
-#: ressources/node_modules/yargs/lib/usage.js:226
-msgid "count"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:230
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:231
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:290
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:291
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-#: ressources/node_modules/yargs/lib/usage.js:227
-#: ressources/node_modules/yargs/lib/usage.js:228
-msgid "string"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:232
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:292
-#: ressources/node_modules/yargs/lib/usage.js:229
-msgid "array"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:233
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:293
-#: ressources/node_modules/yargs/lib/usage.js:230
-msgid "number"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:237
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:297
-#: ressources/node_modules/yargs/lib/usage.js:234
-msgid "required"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:238
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:298
-#: ressources/node_modules/yargs/lib/usage.js:235
-msgid "choices:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:257
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:317
-#: ressources/node_modules/yargs/lib/usage.js:254
-msgid "Examples:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:358
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:436
-#: ressources/node_modules/yargs/lib/usage.js:354
-msgid "generated-value"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/usage.js:380
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:223
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:458
-#: ressources/node_modules/yargs/lib/usage.js:376
-msgid "default:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:26
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:49
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:29
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:52
-#: ressources/node_modules/yargs/lib/validation.js:22
-#: ressources/node_modules/yargs/lib/validation.js:37
-#, javascript-format
-msgid "Not enough non-option arguments: got %s, need at least %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:37
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:40
-#: ressources/node_modules/yargs/lib/validation.js:26
-#, javascript-format
-msgid "Too many non-option arguments: got %s, maximum of %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:183
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:147
-#: ressources/node_modules/yargs/lib/validation.js:171
-msgid "Invalid values:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:186
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:150
-#: ressources/node_modules/yargs/lib/validation.js:174
-#, javascript-format
-msgid "Argument: %s, Given: %s, Choices: %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:212
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:180
-#: ressources/node_modules/yargs/lib/validation.js:200
-#, javascript-format
-msgid "Argument check failed: %s"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:276
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:256
-#: ressources/node_modules/yargs/lib/validation.js:270
-msgid "Implications failed:"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:305
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:295
-#, javascript-format
-msgid "Arguments %s and %s are mutually exclusive"
-msgstr ""
-
-#: ressources/node_modules/localtunnel/node_modules/yargs/lib/validation.js:324
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/validation.js:316
-#: ressources/node_modules/yargs/lib/validation.js:294
-#, javascript-format
-msgid "Did you mean %s?"
-msgstr ""
-
-#: ressources/node_modules/sass-graph/node_modules/yargs-parser/index.js:367
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:382
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:392
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:446
-#: ressources/node_modules/yargs-parser/index.js:301
-#, javascript-format
-msgid "Not enough arguments following: %s"
-msgstr ""
-
-#: ressources/node_modules/sass-graph/node_modules/yargs-parser/index.js:541
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:591
-#: ressources/node_modules/yargs-parser/index.js:449
-#, javascript-format
-msgid "Invalid JSON config file: %s"
-msgstr ""
-
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:92
-msgid "Positionals:"
-msgstr ""
-
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:192
-#: ressources/node_modules/sass-graph/node_modules/yargs/lib/usage.js:194
-msgid "command"
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:372
-#, javascript-format
-msgid "Argument unexpected for: %s"
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:941
-#, javascript-format
-msgid "Invalid configuration: %s, opts.count excludes opts.array."
-msgstr ""
-
-#: ressources/node_modules/stylelint/node_modules/yargs-parser/index.js:944
-#, javascript-format
-msgid "Invalid configuration: %s, opts.count excludes opts.narg."
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "big_int"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "num"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "template_head"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "comment2"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "regexp"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "operator"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "eof"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "expand"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "punc"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "arrow"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "name"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "atom"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "keyword"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "("
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ")"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ":"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ";"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid ","
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "]"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "}"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "{"
-msgstr ""
-
-#: ressources/node_modules/terser/dist/bundle.min.js:1
-msgid "["
-msgstr ""
 
 #~ msgid "Recent Post"
 #~ msgstr "Dernier article"

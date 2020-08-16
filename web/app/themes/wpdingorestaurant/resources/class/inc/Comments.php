@@ -102,5 +102,11 @@ class Comments {
 
             return $class;
         });
+
+        add_filter("comment_reply_link_args", function ($args){
+            $args["reply_text"] = __("Reply", "dingo");
+
+            return $args;
+        });
     }
 }
